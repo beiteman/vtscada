@@ -1,0 +1,33 @@
+{
+  "name": "vtscada-lsp-retrieval",
+  "displayName": "VTScada Function Retrieval",
+  "description": "",
+  "version": "0.0.1",
+  "publisher": "your-name",
+  "engines": { "vscode": "^1.85.0" },
+  "categories": ["Other"],
+  "activationEvents": [
+    "onCommand:pygen.generateCode"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "pygen.generateCode",
+        "title": "Generate Code (LSP)"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -w -p ./"
+  },
+  "dependencies": {
+    "vscode-languageclient": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.6.2"
+  }
+}
