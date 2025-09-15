@@ -19,7 +19,7 @@ Python 3.12.3 or 3.10.10
 ```
 python3 -m venv venv
 venv/bin/python -m ensurepip --upgrade
-venv/bin/python -m install -r requirements.txt
+venv/bin/python -m pip install -r requirements.txt
 ngrok config add-authtoken 32XI5ZutjH6CWZIcWuEFFMojuUO_2wB6UCwRVFsyCEBMAKY4V
 ```
 
@@ -28,8 +28,8 @@ ngrok config add-authtoken 32XI5ZutjH6CWZIcWuEFFMojuUO_2wB6UCwRVFsyCEBMAKY4V
 Server
 ```
 cd server
-ngrok http http://localhost:2087 --log=stdout > ngrok.log &
-../venv/bin/python server.py
+rm -rf ngrok.log && ngrok tcp 2087 --log=stdout > ngrok.log &
+CUDA_VISIBLE_DEVICES=4 ../venv/bin/python server.py
 ```
 
 ## Client
