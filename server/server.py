@@ -17,11 +17,11 @@ max_df = 1.0
 ngram = (1, 1)
 name_weight = 3
 clusters = None
-model = "retrieval/grid_results.pkl"
+model = "grid_results.pkl"
 dense_model = "sentence-transformers/all-MiniLM-L6-v2"
 dense_norm = True
 dense_batch = 256
-dense_device = "cpu"
+dense_device = "gpu"
 
 def inference(prompt: str, top_k = 5) -> str:
     print("------------PROMPT-------------")
@@ -51,7 +51,7 @@ async def generate_code(server: LanguageServer, params: List[str]):
         uri, position_dict, prompt = params[0], params[1], params[2]
         pos = Position(line=int(position_dict["line"]), character=int(position_dict["character"]))
 
-        new_text = make_generated_text(prompt)
+        new_text = inference(prompt)
         text_edit = TextEdit(range=Range(start=pos, end=pos), new_text=new_text)
 
         we = WorkspaceEdit(changes={uri: [text_edit]})
@@ -67,4 +67,5 @@ async def generate_code(server: LanguageServer, params: List[str]):
         return f"generateCode failed: {str(e)}"
 
 if __name__ == "__main__":
+    print("Starting ...")
     ls.start_tcp("0.0.0.0", 2087)
