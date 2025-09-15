@@ -12,7 +12,6 @@ Node v20.19.4
 NPM 10.8.2
 Python 3.12.3 or 3.10.10
 
-
 ## Server
 
 ### Install

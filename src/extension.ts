@@ -11,8 +11,11 @@ let client: LanguageClient | undefined;
 
 export async function activate(context: vscode.ExtensionContext) {
   // ---- Connect to remote TCP server ----
-  const serverHost = "127.0.0.1";
-  const serverPort = 2087;
+  const serverHost = "0.tcp.jp.ngrok.io";
+  const serverPort = 12477;
+
+  // SERVER_HOST = "0.tcp.jp.ngrok.io"
+  // SERVER_PORT = 12477
 
   const serverOptions = () => {
     const socket = net.connect(serverPort, serverHost);
