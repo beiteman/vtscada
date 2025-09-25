@@ -2,3 +2,7 @@ node_modules/
 out/
 ngrok.log
 venv/
+tmp/
+parse.py
+Pro_Functions/
+**/__pycache__

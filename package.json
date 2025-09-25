@@ -4,19 +4,23 @@
   "description": "",
   "version": "0.0.1",
   "publisher": "your-name",
-  "engines": { "vscode": "^1.85.0" },
-  "categories": ["Other"],
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
   "activationEvents": [
-    "onCommand:pygen.generateCode"
+    "*"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
-      {
-        "command": "pygen.generateCode",
-        "title": "Generate Code (LSP)"
-      }
-    ]
+			{
+				"command": "extension.inline-completion-settings",
+				"title": "Completion Settings"
+			}
+		]
   },
   "scripts": {
     "compile": "tsc -p ./",
