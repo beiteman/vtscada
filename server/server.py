@@ -44,6 +44,8 @@ with open("vtscada_functions.json", "r", encoding="utf-8") as f:
     for item in json.load(f):
         vtscada_functions[item["name"].lower()] = item
 
+NEW_LINE = "\n"
+NEW_LINE_ENCODE = "<NEWLINE>"
 def _to_insert_text(function_name: str, leading_whitespaces: str = "") -> str:
     if not function_name:
         return None
@@ -66,11 +68,18 @@ def _to_insert_text(function_name: str, leading_whitespaces: str = "") -> str:
         
     lines = _snippets.split("\r\n")
     for i, line in enumerate(lines):
+        line_cleaned = re.sub(r'\s+', ' ', line.strip())
         if i > 0: 
-            result_lines.append(f"{leading_whitespaces}\t{line.strip()}")
-        else: result_lines.append(f"{leading_whitespaces}{line.strip()}")
-            
-    return "\n" + "\n".join(result_lines).strip()
+            result_lines.append(f"\t{line_cleaned}")
+        else: result_lines.append(line_cleaned)
+    
+    result_lines.append("")
+    result_lines = [f"{leading_whitespaces}{line}" for line in result_lines]
+    
+    
+    result = NEW_LINE + leading_whitespaces + NEW_LINE.join(result_lines).strip()
+    result += NEW_LINE + leading_whitespaces
+    return result.replace(NEW_LINE, NEW_LINE_ENCODE)
 
 def generate_completions(request: Dict[str, Any]) -> Dict[str, Any]:
     document = request['document']
@@ -204,6 +213,6 @@ class TCPServer:
 if __name__ == '__main__':
     load_dotenv()
     server_host = os.getenv('SERVER_HOST', '0.0.0.0')
-    server_port = int(os.getenv('SERVER_PORT', '3000'))
+    server_port = int(os.getenv('SERVER_PORT', '2087'))
     server = TCPServer(host=server_host, port=server_port)
     server.start()

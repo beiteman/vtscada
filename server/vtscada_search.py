@@ -530,22 +530,6 @@ def run_inference(
     dense_batch: int=256,
     dense_device: str="cpu",
 ):
-    print("docs_path", docs_path)
-    print("query", query)
-    print("query_file", query_file)
-    print("top_k", top_k)
-    print("vec_type", vec_type)
-    print("stem", stem)
-    print("min_df", min_df)
-    print("max_df", max_df)
-    print("ngram", ngram)
-    print("name_weight", name_weight)
-    print("clusters", clusters)
-    print("model", model)
-    print("dense_model", dense_model)
-    print("dense_norm", dense_norm)
-    print("dense_batch", dense_batch)
-    print("dense_device", dense_device)
     
     if (query is None) == (query_file is None):
         sys.exit("Provide either --query or --query-file (exactly one).")
