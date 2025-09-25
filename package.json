@@ -11,16 +11,28 @@
     "Other"
   ],
   "activationEvents": [
-    "*"
+    "onLanguage:vtscadascript"
   ],
   "main": "./out/extension.js",
   "contributes": {
+    "languages": [
+      {
+        "id": "vtscadascript",
+        "aliases": [
+          "VTScada Script"
+        ],
+        "extensions": [
+          ".SRC",
+          ".WEB"
+        ]
+      }
+    ],
     "commands": [
-			{
-				"command": "extension.inline-completion-settings",
-				"title": "Completion Settings"
-			}
-		]
+      {
+        "command": "extension.inline-completion-settings",
+        "title": "Completion Settings"
+      }
+    ]
   },
   "scripts": {
     "compile": "tsc -p ./",

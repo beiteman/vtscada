@@ -2,9 +2,13 @@ import * as vscode from 'vscode';
 import * as net from 'net';
 import { Range, Position } from 'vscode';
 
+// // tcp (ngrok)
+// const SERVER_HOST = "0.tcp.jp.ngrok.io";
+// const SERVER_PORT = 12090;
 
-const SERVER_HOST = "127.0.0.1";
-const SERVER_PORT = 3000;
+// localhost
+const SERVER_HOST = "127.0.0.1"
+const SERVER_PORT = 2087;
 
 interface ServerResponse {
     items: {
@@ -32,16 +36,11 @@ export function activate(context: vscode.ExtensionContext) {
     // Connect to Python server
     client.connect(SERVER_PORT, SERVER_HOST, () => {
         isConnected = true;
-        console.log('Connected to Python server');
+        console.log(`Connected to Python server ${SERVER_HOST}:${SERVER_PORT}`);
     });
 
     client.on('data', (data) => {
         responseBuffer += data.toString();
-        // Check if we've received a complete JSON message (ends with newline)
-        if (responseBuffer.includes('\n')) {
-            const messages = responseBuffer.split('\n');
-            responseBuffer = messages.pop() || ''; // Save incomplete part
-        }
     });
 
     client.on('error', (err) => {
@@ -56,6 +55,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     // Register command
     vscode.commands.registerCommand('vtscada.query', async (...args) => {
+		console.log('Completion accepted: ' + JSON.stringify(args));
         vscode.window.showInformationMessage('Completion accepted: ' + JSON.stringify(args));
     });
 
@@ -85,7 +85,7 @@ export function activate(context: vscode.ExtensionContext) {
                 const response = await new Promise<ServerResponse>((resolve, reject) => {
                     const timeout = setTimeout(() => {
                         reject(new Error('Server timeout after 2 seconds'));
-                    }, 2000);
+                    }, 5000);
 
                     client.write(JSON.stringify(request) + '\n', (err) => {
                         if (err) reject(err);
@@ -100,6 +100,7 @@ export function activate(context: vscode.ExtensionContext) {
                                 resolve(JSON.parse(message));
                             }
                         } catch (e) {
+							console.log("error " + e);
                             reject(e);
                         }
                     };
@@ -108,31 +109,46 @@ export function activate(context: vscode.ExtensionContext) {
                 });
 
                 // Convert server response to VS Code completion items
-                const completionItems = response.items.map(item => {
-                    const range = new Range(
-                        new Position(item.range.start.line, item.range.start.character),
-                        new Position(item.range.end.line, item.range.end.character)
-                    );
+                const completionItems = [];
+				for (const item of response.items) {
+					try {
+						const range = new Range(
+							new Position(item.range.start.line, item.range.start.character),
+							new Position(item.range.end.line, item.range.end.character)
+						);
 
-                    return {
-						label: "label",
-						detail: "detail",
-						documentation: "documentation",
-						kind: vscode.CompletionItemKind.Function,
-                        insertText: new vscode.SnippetString(item.insertText),
-                        insertTextFormat: item.insertTextFormat,
-                        range: range,
-                        command: item.command ? {
-                            command: item.command.command,
-                            title: item.command.title,
-                            arguments: item.command.arguments
-                        } : undefined
-                    };
-                });
+						const NEW_LINE_ENCODED = "<NEWLINE>";
 
-                return {
-                    items: completionItems
-                };
+						// decode new line
+						var insertText = item.insertText.replaceAll(NEW_LINE_ENCODED, '\n');
+
+						// remove non ascii character to prevent json error
+						insertText = insertText.replace(/[^\x00-\x7F]/g, "");
+
+						// If all parsing/creation steps succeed, push the item
+						completionItems.push({
+							label: "label",
+							detail: "detail",
+							documentation: "documentation",
+							kind: vscode.CompletionItemKind.Function,
+							insertText: new vscode.SnippetString(insertText),
+							insertTextFormat: item.insertTextFormat,
+							range: range,
+							command: item.command ? {
+								command: item.command?.command,
+								title: item.command.title,
+								arguments: item.command.arguments
+							} : undefined
+						});
+
+					} catch (error) {
+						console.error("Failed to process completion item:", error, item);
+					}
+				}
+
+				return {
+					items: completionItems
+				};
 
             } catch (error) {
                 console.error('Error getting completions:', error);
