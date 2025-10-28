@@ -8,4 +8,6 @@ models/**
 !models/vtscada_functions_zh-TW.json
 !models/vtscada_search.py
 
-resources/model.*.onnx
+resources/model.zh-tw.onnx
+resources/model.zh-cn.onnx
+resources/model.en.onnx
