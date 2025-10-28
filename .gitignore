@@ -1,2 +1,11 @@
 node_modules/
-models/
+models/**
+!models/grid_results_en.pkl
+!models/grid_results_zh-CN.pkl
+!models/grid_results_zh-TW.pkl
+!models/vtscada_functions_en.json
+!models/vtscada_functions_zh-CH.json
+!models/vtscada_functions_zh-TW.json
+!models/vtscada_search.py
+
+resources/model.*.onnx
