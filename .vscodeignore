@@ -1,7 +1,0 @@
-**/.git
-**/.gitignore
-**/.DS_Store
-node_modules/**/.bin
-.vscode/**
-**/*.map
-**/*.ts

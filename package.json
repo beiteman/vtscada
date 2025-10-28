@@ -1,14 +1,26 @@
 {
-  "name": "vtscada-lsp-retrieval",
+  "name": "vtscada-function-retrieval",
   "displayName": "VTScada Function Retrieval",
   "description": "",
   "version": "0.0.1",
-  "publisher": "your-name",
+  "publisher": "vtscada",
   "engines": {
     "vscode": "^1.85.0"
   },
   "categories": [
     "Other"
+  ],
+  "files": [
+    "resources/model.en.onnx",
+    "resources/model.zh-cn.onnx",
+    "resources/model.zh-tw.onnx",
+
+    "resources/model_info.en.json",
+    "resources/model_info.zh-cn.json",
+    "resources/model_info.zh-twjsonx",
+    
+    "resources/tfidf_matrix.onnx",
+    "resources/model_info.json"
   ],
   "activationEvents": [
     "onLanguage:vtscadascript"
@@ -39,10 +51,12 @@
     "watch": "tsc -w -p ./"
   },
   "dependencies": {
+    "natural": "^8.1.0",
+    "onnxruntime-node": "^1.23.0",
     "vscode-languageclient": "^9.0.1"
   },
   "devDependencies": {
-    "@types/node": "^20.11.30",
+    "@types/node": "^20",
     "@types/vscode": "^1.85.0",
     "typescript": "^5.6.2"
   }

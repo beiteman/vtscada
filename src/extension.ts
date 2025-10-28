@@ -1,174 +1,131 @@
 import * as vscode from 'vscode';
-import * as net from 'net';
+import * as path from 'path';
 import { Range, Position } from 'vscode';
+import { FuncDocument, FuncDocumentRetriever } from './retriever';
+import { getLeadingWhitespace } from './utils';
+import { Lang, LanguageIdentifier } from './languages';
 
-// // tcp (ngrok)
-// const SERVER_HOST = "0.tcp.jp.ngrok.io";
-// const SERVER_PORT = 12090;
+const defaultLang: Lang = 'en';
+const recognizedLangs: Lang[] = ['en', 'zh-tw', 'zh-cn'];
+const topK: number = 5;
 
-// localhost
-const SERVER_HOST = "127.0.0.1"
-const SERVER_PORT = 2087;
+async function getInlineCompletionItems(
+    retriever: FuncDocumentRetriever,
+    document: vscode.TextDocument,
+    position: vscode.Position,
+    query: string): Promise<vscode.InlineCompletionItem[]> {
 
-interface ServerResponse {
-    items: {
-        insertText: string;
-        insertTextFormat: null | number;
-        range: {
-            start: { line: number; character: number };
-            end: { line: number; character: number };
-        };
-        command?: {
-            command: string;
-            title: string;
-            arguments: any[];
-        };
-    }[];
+    const character = position.character > 0 ? position.character : 1;
+    const range = new Range(
+        new Position(position.line, character),
+        new Position(position.line, character)
+    );
+
+    let leadingWhitespace = getLeadingWhitespace(document.lineAt(position.line - 1).text);
+    const result: vscode.InlineCompletionItem[] = [];
+    const documents: FuncDocument[] = await retriever.retrieve(query, topK);
+    documents.forEach(item => {
+        const comments = item.comments;
+        const snippets = item.snippets;
+
+        const commentsRange = new vscode.Range(
+            new vscode.Position(position.line, 0),
+            new vscode.Position(position.line + comments.length, 0)
+        );
+
+        let insertText: string = "";
+        comments.forEach((line, index) => {
+            if (index == 0) {
+                // first line
+                insertText = line;
+            } else {
+                // next lines
+                insertText = `${insertText}\n${leadingWhitespace}${line}`;
+            }
+        });
+
+        snippets.forEach((line, _) => {
+            insertText = `${insertText}\n${leadingWhitespace}${line}`;
+        });
+
+        result.push({
+            insertText: insertText,
+            range: range,
+            command: {
+                command: 'extension.removeLines',
+                title: 'Cleanup docs after inline completion',
+                arguments: [commentsRange]
+            },
+        })
+    });
+    return result;
 }
 
 export function activate(context: vscode.ExtensionContext) {
-    console.log('Inline completions TCP client activated');
 
-    const client = new net.Socket();
-    let isConnected = false;
-    let responseBuffer = '';
-
-    // Connect to Python server
-    client.connect(SERVER_PORT, SERVER_HOST, () => {
-        isConnected = true;
-        console.log(`Connected to Python server ${SERVER_HOST}:${SERVER_PORT}`);
+    // model init --------------------------
+    const retrieverByLang: Map<Lang, FuncDocumentRetriever> = new Map();
+    const languages: Lang[] = ["en", "zh-tw", "zh-cn"];
+    languages.forEach(lang => {
+        const modelInfoPath = path.join(context.extensionPath, "resources", `info.${lang}.json`);
+        const modelPath = path.join(context.extensionPath, "resources", `model.${lang}.onnx`);
+        const docsPath = path.join(context.extensionPath, "resources", `docs.${lang}.json`);
+        FuncDocumentRetriever.create(modelPath, modelInfoPath, docsPath)
+            .then(retriever => retrieverByLang.set(lang, retriever))
+            .catch(error => {
+                console.error(`FuncDocumentRetriever(${lang})`, error);
+                return Promise.reject(error);
+            });
     });
 
-    client.on('data', (data) => {
-        responseBuffer += data.toString();
-    });
-
-    client.on('error', (err) => {
-        console.error('Connection error:', err);
-        isConnected = false;
-    });
-
-    client.on('close', () => {
-        isConnected = false;
-        console.log('Connection closed');
-    });
-
-    // Register command
-    vscode.commands.registerCommand('vtscada.query', async (...args) => {
-		console.log('Completion accepted: ' + JSON.stringify(args));
-        vscode.window.showInformationMessage('Completion accepted: ' + JSON.stringify(args));
-    });
+    // language identifier --------------------------
+    const langIdentifier = new LanguageIdentifier();
+    // ----------------------------------------------
 
     const provider: vscode.InlineCompletionItemProvider = {
-        async provideInlineCompletionItems(document, position) {
-            if (!isConnected) return { items: [] };
 
-            try {
-                // Prepare request with full document and position
-                const request = {
-                    document: {
-                        text: document.getText(),
-                        uri: document.uri.toString(),
-                        languageId: document.languageId,
-                        lineCount: document.lineCount
-                    },
-                    position: {
-                        line: position.line,
-                        character: position.character
-                    },
-                    context: {
-                        triggerKind: 0 // Invoked automatically
+        async provideInlineCompletionItems(document, position, context, _token) {
+            const regexp = /^(\s*)\{\s*(.*?)\s*\}\s*$/;
+            if (position.line <= 0) return { items: [] };
+            const lineBefore = document.lineAt(position.line - 1).text;
+            const match = lineBefore.match(regexp);
+            if (match) {
+                const query = match[2].trim();
+                if (!query) return { items: [] };
+                try {
+                    // check the query language
+                    const lang = langIdentifier.identify(
+                        query, defaultLang, recognizedLangs);
+                    const retriever = retrieverByLang.get(lang);
+                    if (retriever !== undefined) {
+                        let items = await getInlineCompletionItems(
+                            retriever, document, position, query);
+                        return { items: items };
+                    } else {
+                        console.warn(`Model not found "${lang}"`);
                     }
-                };
-
-                // Send request and wait for response
-                const response = await new Promise<ServerResponse>((resolve, reject) => {
-                    const timeout = setTimeout(() => {
-                        reject(new Error('Server timeout after 2 seconds'));
-                    }, 5000);
-
-                    client.write(JSON.stringify(request) + '\n', (err) => {
-                        if (err) reject(err);
-                    });
-
-                    const listener = (data: Buffer) => {
-                        try {
-                            const message = data.toString();
-                            if (message.trim()) {
-                                clearTimeout(timeout);
-                                client.off('data', listener);
-                                resolve(JSON.parse(message));
-                            }
-                        } catch (e) {
-							console.log("error " + e);
-                            reject(e);
-                        }
-                    };
-
-                    client.on('data', listener);
-                });
-
-                // Convert server response to VS Code completion items
-                const completionItems = [];
-				for (const item of response.items) {
-					try {
-						const range = new Range(
-							new Position(item.range.start.line, item.range.start.character),
-							new Position(item.range.end.line, item.range.end.character)
-						);
-
-						const NEW_LINE_ENCODED = "<NEWLINE>";
-
-						// decode new line
-						var insertText = item.insertText.replaceAll(NEW_LINE_ENCODED, '\n');
-
-						// remove non ascii character to prevent json error
-						insertText = insertText.replace(/[^\x00-\x7F]/g, "");
-
-						// If all parsing/creation steps succeed, push the item
-						completionItems.push({
-							label: "label",
-							detail: "detail",
-							documentation: "documentation",
-							kind: vscode.CompletionItemKind.Function,
-							insertText: new vscode.SnippetString(insertText),
-							insertTextFormat: item.insertTextFormat,
-							range: range,
-							command: item.command ? {
-								command: item.command?.command,
-								title: item.command.title,
-								arguments: item.command.arguments
-							} : undefined
-						});
-
-					} catch (error) {
-						console.error("Failed to process completion item:", error, item);
-					}
-				}
-
-				return {
-					items: completionItems
-				};
-
-            } catch (error) {
-                console.error('Error getting completions:', error);
-                return { items: [] };
+                } catch (error) {
+                    console.log(error)
+                }
             }
+            return { items: [] };
         }
     };
+    context.subscriptions.push(
+        vscode.languages.registerInlineCompletionItemProvider({ pattern: '**' }, provider)
+    );
 
-    vscode.languages.registerInlineCompletionItemProvider({ pattern: '**' }, provider);
+    // --- Clean up comment after accepting ---
+    context.subscriptions.push(
+        vscode.commands.registerCommand('extension.removeLines', async (range: vscode.Range) => {
+            const editor = vscode.window.activeTextEditor;
+            if (!editor) return;
 
-    // Clean up on deactivation
-    context.subscriptions.push({
-        dispose: () => {
-            if (isConnected) {
-                client.end();
-            }
-        }
-    });
+            await editor.edit(editBuilder => {
+                editBuilder.delete(range);
+            });
+        })
+    );
+
 }
 
-export function deactivate() {
-    // Cleanup handled by subscription
-}
