@@ -1,14 +1,16 @@
 
     { monitors the card reader  }
-    GetLogonCredentialsFromSmartcard(
-    	MarshalledCredential, { Required. The marshalled credential used with
-    		WindowsLogon }
-    	Username, { Required text. A variable in which the username found in
-    		the certificate will be returned in UPN format (e.g.
-    		a.user@example.com). This is not a VTScada user name. }
-    	Sha1 { Required. A variable in which the variable the Sha1 hash of the
-    		certificate will be returned. }
+    VICSmartcardMonitor(
+    	SmartcardRemoved, { Required. A variable whose value is set to TRUE if
+    		the smart card has been removed, else FALSE. }
+    	SecurityContext, { Required. A variable whose value is set to the
+    		Kerberos Security Context for the user attempting to sign in on the
+    		VIC using a smart card. }
+    	UPN { Required. A variable whose value is set to the User Principal
+    		Name (e.g. user@example.com) for the user attempting to sign in on the
+    		VIC using a Smartcard. }
     );
+
     
     { returns the parent object of an instance of that module }
     ChildInstances(
@@ -26,7 +28,7 @@
     		and store that array of object values in the element of the returned
     		array, instead of the object value. }
     	1, { 2 }
-    	4 { }
+    	4
     );
 
     { filter }
@@ -127,13 +129,71 @@
     );
 
     { 從資料庫複製記錄，並將這些值插入回相同資料表中 }
-    AcceptSecurityContext(
-    	InputBuffer, { Required. The security context from a client }
-    	UserName, { Required. A variable that will receive the UPNformat
-    		username of the user that created the context if the context is
-    		successfully validated. }
-    	OutputBuffer { Required. Any security context response to be returned
-    		to a client. }
+    System.4BtnDialog(
+    	Icon, { Optional. Any image value for the (41 x 41) icon to display in
+    		the dialog. Set to "Invalid" to display only text with no icon.
+    		predefined icons include: \System\Question_icon, \System\Error_icon,
+    		and \System\Warning_icon. }
+    	Btn1Label, { Required. Any text expression for the label on the first
+    		button. }
+    	Btn2Label, { An optional parameter giving any text expression for the
+    		label on the second button. If invalid, the button will be omitted. }
+    	Btn3Label, { An optional parameter giving any text expression for the
+    		label on the third button. If invalid, the button will be omitted. }
+    	Btn4Label, { An optional parameter giving any text expression for the
+    		label on the fourth button. If invalid, the button will be omitted. }
+    	Text1, { An optional parameter giving any text expression for the
+    		first line of text to display. }
+    	Text2, { An optional parameter giving any text expression for the
+    		second line of text to display. }
+    	Text3, { A parameter giving any text expression for the third line of
+    		text to display. Must be given as Invalid if there is to be no third
+    		line. }
+    	Open, { An optional parameter that is any logical expression. If TRUE
+    		(non-0) the dialog will be open. If FALSE (0), it will be closed. The
+    		default is TRUE. Open will be set to FALSE after the dialog has been
+    		acknowledged. }
+    	Modal, { An optional parameter that is any logical expression. If true
+    		(non-0), the dialog is modal A modal dialog is always displayed on top
+    		of the calling window and prevents further interaction with that
+    		window. , if false (0) it is non-modal. This parameter will override
+    		the System NoModal flag. If it is omitted, the NoModal flag will
+    		prevail. If the NoModal flag is also omitted, the dialog will default
+    		to being modal. }
+    	BoldFirst, { An optional parameter that is any logical expression. If
+    		true (non-0) the first line of text in the dialog will appear in
+    		boldface type. If false (0), it will not be bolded. The default is
+    		false. }
+    	Title, { An optional parameter that is any text expression that gives
+    		the title to appear in the window's title bar. }
+    	XPosPtr, { Optional pointer to a variable that stores the x-coordinate
+    		of the upper left of the dialog, relative to the current monitor. This
+    		parameter affects the position when the dialog opens, after which it
+    		is used only to return the current position of the dialog as placed by
+    		the user. }
+    	YPosPtr, { Optional pointer to a variable that stores the y-coordinate
+    		of the upper left of the dialog, relative to the current monitor. This
+    		parameter affects the position when the dialog opens, after which it
+    		is used only to return the current position of the dialog as placed by
+    		the user. }
+    	CloseButton, { An optional parameter that is the index of the button
+    		to which the title bar close button should be mapped (from 1 to 4). If
+    		CloseBtn is invalid, then the title bar close button is mapped to the
+    		first button with the same text as the CancelLabel or CloseLabel
+    		application properties. If no buttons match these labels, then "0" is
+    		returned when the dialog is closed using the title bar close button. }
+    	DefFocus, { An optional parameter that is the index of the button that
+    		should have the focus when the dialog opens (from 1 to 4). If DefFocus
+    		is invalid, the first button has the focus when the dialog opens. }
+    	HelpFileName, { An optional parameter that is the name of the help
+    		file containing the help topic for this dialog (as identified in the
+    		HelpContextID parameter). If HelpFileName or HelpContextID are
+    		invalid, then the default is as per the Window function. }
+    	HelpContextID { An optional parameter that is the numeric context ID
+    		identifying the help topic for this dialog (within the help file
+    		identified in the HelpFileName parameter). If HelpFileName or
+    		HelpContextID are invalid, then the default is as per the Window
+    		function. }
     );
 
     { 監控讀卡機上的智慧卡並讀取其憑證資訊 }

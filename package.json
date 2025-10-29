@@ -4,6 +4,11 @@
   "description": "",
   "version": "0.0.1",
   "publisher": "vtscada",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/beiteman/vtscada.git"
+  },
+  "license": "UNLICENSED",
   "engines": {
     "vscode": "^1.85.0"
   },
@@ -14,11 +19,9 @@
     "resources/model.en.onnx",
     "resources/model.zh-cn.onnx",
     "resources/model.zh-tw.onnx",
-
     "resources/model_info.en.json",
     "resources/model_info.zh-cn.json",
     "resources/model_info.zh-twjsonx",
-    
     "resources/tfidf_matrix.onnx",
     "resources/model_info.json"
   ],
@@ -47,8 +50,15 @@
     ]
   },
   "scripts": {
-    "compile": "tsc -p ./",
-    "watch": "tsc -w -p ./"
+    "compile:test": "tsc -p ./",
+    "watch:test": "tsc -w -p ./",
+    "compile": "npm run check-types && node esbuild.js",
+    "check-types": "tsc --noEmit",
+    "watch": "npm-run-all -p watch:*",
+    "watch:esbuild": "node esbuild.js --watch",
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+    "vscode:prepublish": "npm run package",
+    "package": "npm run check-types && node esbuild.js --production"
   },
   "dependencies": {
     "natural": "^8.1.0",
@@ -58,6 +68,9 @@
   "devDependencies": {
     "@types/node": "^20",
     "@types/vscode": "^1.85.0",
+    "esbuild": "^0.25.11",
+    "fs-extra": "^11.3.2",
+    "npm-run-all": "^4.1.5",
     "typescript": "^5.6.2"
   }
 }

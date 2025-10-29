@@ -11,3 +11,5 @@ models/**
 resources/model.zh-tw.onnx
 resources/model.zh-cn.onnx
 resources/model.en.onnx
+dist/
+*.vsix

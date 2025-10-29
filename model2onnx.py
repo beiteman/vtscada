@@ -220,7 +220,8 @@ def doc_to_snippets(doc) -> List[str]:
         if doc.get("parameters"):
             result.append(f"{fn_name}(")
             for i, param in enumerate(doc["parameters"]):
-                comment = "{ " + clean_text(param["description"]) + " }"
+                param_desc = clean_text(param["description"])
+                comment = "{ " + param_desc + " }" if param_desc.strip() else ""
                 if i < (len(doc["parameters"]) - 1):
                     lines = word_wrap(f"\t{param['name']}, {comment}")
                     for line in lines:

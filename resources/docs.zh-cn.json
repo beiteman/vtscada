@@ -901,7 +901,7 @@
             "\t16, { 32 }",
             "\t64, { 128 }",
             "\t256, { 512 }",
-            "\t1024 { }",
+            "\t1024",
             ");"
         ],
         "is_steady_state": false,
@@ -1424,7 +1424,7 @@
             "\t\tvalid 0s 1 Causes buffer to be invalid 2 Output to buffer as valid 0s",
             "\t\t}",
             "\t0, { 1 }",
-            "\t2 { }",
+            "\t2",
             ");"
         ],
         "is_steady_state": true,
@@ -2267,7 +2267,7 @@
             "\tn, { o }",
             "\ts, { t }",
             "\tu, { x }",
-            "\tznnn, { }",
+            "\tznnn,",
             "\t0, { 1 }",
             "\t2, { 3 }",
             "\t4, { 5 }",
@@ -2385,7 +2385,7 @@
             "\t4, { 5 }",
             "\t6, { 7 }",
             "\t8, { 9 }",
-            "\t10 { }",
+            "\t10",
             ");"
         ],
         "is_steady_state": false,
@@ -2603,13 +2603,13 @@
             "\to, { p }",
             "\ts, { t }",
             "\tu, { x }",
-            "\tX, { }",
+            "\tX,",
             "\t0, { 1 }",
             "\t2, { 3 }",
             "\t4, { 5 }",
             "\t6, { 7 }",
             "\t8, { 9 }",
-            "\t10, { }",
+            "\t10,",
             "\t\\b, { \\f }",
             "\t\\n, { \\r }",
             "\t\\t { \\v }",
@@ -2647,7 +2647,7 @@
             "\t\tSyBase }",
             "\t0, { 1 }",
             "\t2, { 3 }",
-            "\t4 { }",
+            "\t4",
             ");"
         ],
         "is_steady_state": false,
@@ -2697,7 +2697,7 @@
             "\t\tSyBase }",
             "\t0, { 1 }",
             "\t2, { 3 }",
-            "\t4 { }",
+            "\t4",
             ");"
         ],
         "is_steady_state": false,
@@ -2773,7 +2773,7 @@
             "\t\tSyBase }",
             "\t0, { 1 }",
             "\t2, { 3 }",
-            "\t4 { }",
+            "\t4",
             ");"
         ],
         "is_steady_state": false,
@@ -2820,7 +2820,7 @@
             "\t\tand store that array of object values in the element of the returned",
             "\t\tarray, instead of the object value. }",
             "\t1, { 2 }",
-            "\t4 { }",
+            "\t4",
             ");"
         ],
         "is_steady_state": false,
@@ -2953,7 +2953,7 @@
             "\t\tavailable (001) 2 1 TRUE if read only (010) 3 2 TRUE if file is out of",
             "\t\tsync (100) }",
             "\t1, { 2 }",
-            "\t3 { }",
+            "\t3",
             ");"
         ],
         "is_steady_state": false,
@@ -3245,7 +3245,7 @@
             "\t2, { 3 }",
             "\t4, { 5 }",
             "\t6, { 7 }",
-            "\t8 { }",
+            "\t8",
             ");"
         ],
         "is_steady_state": true,
@@ -3419,7 +3419,7 @@
             "\t\tand store that array of object values in the element of the returned",
             "\t\tarray, instead of the object value. }",
             "\t1, { 2 }",
-            "\t4 { }",
+            "\t4",
             ");"
         ],
         "is_steady_state": false,
@@ -3737,7 +3737,7 @@
             "\t\tthe file for the start of the expression. 2 Return the size (number of",
             "\t\tbytes) of the expression. }",
             "\t0, { 1 }",
-            "\t2 { }",
+            "\t2",
             ");"
         ],
         "is_steady_state": false,
@@ -3786,7 +3786,7 @@
             "\t\tStandard is true, this parameter is ignored. The default value is 0,",
             "\t\ttop alignment. }",
             "\t0, { 1 }",
-            "\t2 { }",
+            "\t2",
             ");"
         ],
         "is_steady_state": true,
@@ -4073,7 +4073,7 @@
             "\t-12, { -13 }",
             "\t-14, { -15 }",
             "\t-16, { -17 }",
-            "\t-18 { }",
+            "\t-18",
             ");"
         ],
         "is_steady_state": false,
@@ -4113,7 +4113,7 @@
             "\t\tparity 3 0 Stick (space parity) 4 1 Stick (mark parity) }",
             "\t0, { 1 }",
             "\t2, { 3 }",
-            "\t4 { }",
+            "\t4",
             ");"
         ],
         "is_steady_state": true,
@@ -4836,7 +4836,6 @@
             "\t\tindicates that time returned should be local time. If set to 1,",
             "\t\tindicates that the current UTC time should be returned. Defaults to 0",
             "\t\tif missing or Invalid. }",
-            "\t{ }",
             ");"
         ],
         "is_steady_state": false,
@@ -5212,7 +5211,7 @@
             "\t\t1 The specific list number The database and transaction log cannot be",
             "\t\tcombined with other lists. }",
             "\t-1, { 0 }",
-            "\tNumber, starting at 1 { }",
+            "\tNumber, starting at 1",
             ");"
         ],
         "is_steady_state": false,
@@ -5239,7 +5238,7 @@
             "\t\tnumber The database and transaction log cannot be combined with other",
             "\t\tlists. }",
             "\t-1, { 0 }",
-            "\tNumber, starting at 1 { }",
+            "\tNumber, starting at 1",
             ");"
         ],
         "is_steady_state": false,
@@ -5347,7 +5346,7 @@
             "\t\tthat has been selected by the List parameter. Text Value Event + Add",
             "\t\tto list - Remove from list <space> Do nothing to list }",
             "\t+, { - }",
-            "\t<space> { }",
+            "\t<space>",
             ");"
         ],
         "is_steady_state": false,
@@ -5669,7 +5668,7 @@
             "\t\tMeaning 0 Key successfully imported. 1 Key, CipherText or Final",
             "\t\tparameters invalid. x Any other value is an error from CryptDecrypt. }",
             "\t0, { 1 }",
-            "\tx { }",
+            "\tx",
             ");"
         ],
         "is_steady_state": false,
@@ -5870,7 +5869,7 @@
             "\t\tcannot be edited. }",
             "\t1, { 2 }",
             "\t3, { 4 }",
-            "\t6 { }",
+            "\t6",
             ");"
         ],
         "is_steady_state": false,
@@ -6055,7 +6054,7 @@
             "\t\tsuccessfully generated 1 CSPHandle or AlgID parameters invalid X Any",
             "\t\tother value is an error from CryptGenKey. }",
             "\t0, { 1 }",
-            "\tX { }",
+            "\tX",
             ");"
         ],
         "is_steady_state": false,
@@ -6281,7 +6280,7 @@
             "\t0, { 8 }",
             "\t1, { 2 }",
             "\t4, { 16 }",
-            "\t32 { }",
+            "\t32",
             ");"
         ],
         "is_steady_state": false,
@@ -6401,7 +6400,7 @@
             "\t2, { 3 }",
             "\t4, { 5 }",
             "\t6, { 7 }",
-            "\t8 { }",
+            "\t8",
             ");"
         ],
         "is_steady_state": false,
@@ -6809,7 +6808,7 @@
             "\t\tcalculated is determined by the value of AlignTitle. The default value",
             "\t\tis 0. }",
             "\t0, { 1 }",
-            "\t2 { }",
+            "\t2",
             ");"
         ],
         "is_steady_state": true,
@@ -6928,7 +6927,7 @@
             "\t\t2 if FocusID is 0 and 1 otherwise. }",
             "\t0, { 1 }",
             "\t2, { 3 }",
-            "\t4 { }",
+            "\t4",
             ");"
         ],
         "is_steady_state": true,
@@ -6994,7 +6993,7 @@
             "\t\ta decimal value when return is pressed. The default value is 4. }",
             "\t0, { 1 }",
             "\t2, { 3 }",
-            "\t4 { }",
+            "\t4",
             ");"
         ],
         "is_steady_state": true,
@@ -7030,7 +7029,7 @@
             "\t2, { 3 }",
             "\t4, { 5 }",
             "\t6, { 7 }",
-            "\t8 { }",
+            "\t8",
             ");"
         ],
         "is_steady_state": true,
@@ -7065,7 +7064,7 @@
             "\t\tmode, 2 - column mode) }",
             "\t0, { 1 }",
             "\t2, { 3 }",
-            "\t4 { }",
+            "\t4",
             ");"
         ],
         "is_steady_state": true,
@@ -7237,7 +7236,7 @@
             "\t\t0 Key successfully imported. 1 Key, PlainText or Final parameters",
             "\t\tinvalid. x Any other value is an error from CryptEncrypt. }",
             "\t0, { 1 }",
-            "\tx { }",
+            "\tx",
             ");"
         ],
         "is_steady_state": false,
@@ -7473,7 +7472,7 @@
             "\t\t0 Key successfully exported. 1 Key or BlobType parameters invalid. x",
             "\t\tAny other value is an error from CryptExportKey. }",
             "\t0, { 1 }",
-            "\tx { }",
+            "\tx",
             ");"
         ],
         "is_steady_state": false,
@@ -7557,7 +7556,7 @@
             "\t\tloss of phase information. }",
             "\t0, { 1 }",
             "\t2, { 3 }",
-            "\t4 { }",
+            "\t4",
             ");"
         ],
         "is_steady_state": false,
@@ -7663,7 +7662,7 @@
             "\t\t(please read Comments below if you require a \"Browse for Folder\"",
             "\t\tdialog). }",
             "\t0, { Non-zero (positive) }",
-            "\t-1 { }",
+            "\t-1",
             ");"
         ],
         "is_steady_state": false,
@@ -7693,7 +7692,7 @@
             "\t0, { 8 }",
             "\t1, { 2 }",
             "\t4, { 16 }",
-            "\t32 { }",
+            "\t32",
             ");"
         ],
         "is_steady_state": false,
@@ -7889,7 +7888,7 @@
             "\t\tlast action in the state, or if Mode is -1, and Action is the first",
             "\t\tpredicate in the state, the return value is invalid. }",
             "\t-1, { 0 }",
-            "\t1 { }",
+            "\t1",
             ");"
         ],
         "is_steady_state": false,
@@ -8270,7 +8269,7 @@
             "\t\tvalue is invalid, all fonts will be displayed. If out of range, then",
             "\t\tthe function call is not valid. }",
             "\t0, { 1 }",
-            "\t2 { }",
+            "\t2",
             ");"
         ],
         "is_steady_state": false,
@@ -8316,7 +8315,7 @@
             "\t21, { 22 }",
             "\t23, { 24 }",
             "\t25, { 26 }",
-            "\t27 { }",
+            "\t27",
             ");"
         ],
         "is_steady_state": true,
@@ -8649,7 +8648,7 @@
             "\tn, { o }",
             "\ts, { t }",
             "\tu, { x }",
-            "\tznnn, { }",
+            "\tznnn,",
             "\t0, { 1 }",
             "\t2, { 3 }",
             "\t4, { 5 }",
@@ -8763,7 +8762,7 @@
             "\t\tsuccessfully generated. 1 CSPHandle or AlgID parameters invalid. x Any",
             "\t\tother value is an error from CryptGenKey. }",
             "\t0, { 1 }",
-            "\tx { }",
+            "\tx",
             ");"
         ],
         "is_steady_state": false,
@@ -8832,7 +8831,7 @@
             "\t\tsingle Get statement. To do this, pass an array of values in as the",
             "\t\tFieldNum parameter }",
             "\t-1, { -2 }",
-            "\t-3 { }",
+            "\t-3",
             ");"
         ],
         "is_steady_state": false,
@@ -9458,7 +9457,7 @@
             "\t20, { 21 }",
             "\t22, { 23 }",
             "\t24, { 25 }",
-            "\t26 { }",
+            "\t26",
             ");"
         ],
         "is_steady_state": true,
@@ -9762,8 +9761,8 @@
             "\t\topen-locked) 2 1 Read access (i.e. the file can be read) 4 2 Write",
             "\t\taccess (i.e. the file can be written) 3 Timestamp showing the date",
             "\t\tmodified (UTC) }",
-            "\t0, { }",
-            "\t2 { }",
+            "\t0,",
+            "\t2",
             ");"
         ],
         "is_steady_state": false,
@@ -10021,7 +10020,7 @@
             "\t\tparameter successfully returned. 1 Key or Param parameters invalid. x",
             "\t\tAny other value is an error from CryptGetKeyParam. }",
             "\t0, { 1 }",
-            "\tx { }",
+            "\tx",
             ");"
         ],
         "is_steady_state": false,
@@ -10225,7 +10224,7 @@
             "\t8, { 9 }",
             "\t10, { 11 }",
             "\t12, { 13 }",
-            "\t14 { }",
+            "\t14",
             ");"
         ],
         "is_steady_state": false,
@@ -10396,7 +10395,7 @@
             "\t4, { 5 }",
             "\t6, { 7 }",
             "\t8, { 9 }",
-            "\t10 { }",
+            "\t10",
             ");"
         ],
         "is_steady_state": true,
@@ -10517,7 +10516,7 @@
             "\t\tfile for the start of the parameter. 2 Return the size (number of",
             "\t\tbytes) of the parameter. }",
             "\t0, { 1 }",
-            "\t2 { }",
+            "\t2",
             ");"
         ],
         "is_steady_state": false,
@@ -10530,7 +10529,6 @@
         ],
         "snippets": [
             "GetOPCServerRequestRate(",
-            "\t{ }",
             ");"
         ],
         "is_steady_state": true,
@@ -11477,7 +11475,7 @@
             "\t14, { 15 }",
             "\t16, { 17 }",
             "\t18, { 19 }",
-            "\t20 { }",
+            "\t20",
             ");"
         ],
         "is_steady_state": true,
@@ -11630,7 +11628,7 @@
             "\t8, { 9 }",
             "\t10, { 11 }",
             "\t12, { 13 }",
-            "\t14 { }",
+            "\t14",
             ");"
         ],
         "is_steady_state": false,
@@ -11826,7 +11824,6 @@
             "\t\tlist instead of the Tokens list. Defaults to FALSE. }",
             "\tReturnAll, { Optional Boolean. Set TRUE to return all matching",
             "\t\trecords. Defaults to FALSE. }",
-            "\t{ }",
             ");"
         ],
         "is_steady_state": true,
@@ -11898,7 +11895,7 @@
             "\t2, { 3 }",
             "\t4, { 5 }",
             "\t6, { 7 }",
-            "\t8 { }",
+            "\t8",
             ");"
         ],
         "is_steady_state": false,
@@ -13615,7 +13612,7 @@
             "\t\twill not scale down to fit within the available space. Text that does",
             "\t\tnot fit is clipped. }",
             "\t0, { 1 }",
-            "\t2 { }",
+            "\t2",
             ");"
         ],
         "is_steady_state": true,
@@ -13836,7 +13833,7 @@
             "\t\tPartial key Partial key string 3 ID ID number 4 Help Topics 0 }",
             "\t0, { 1 }",
             "\t2, { 3 }",
-            "\t4 { }",
+            "\t4",
             ");"
         ],
         "is_steady_state": false,
@@ -14032,7 +14029,7 @@
             "\t8, { 9 }",
             "\t10, { 11 }",
             "\t12, { 13 }",
-            "\t14 { }",
+            "\t14",
             ");"
         ],
         "is_steady_state": false,
@@ -14067,7 +14064,7 @@
             "\t0, { 1 }",
             "\t2, { 3 }",
             "\t4, { 5 }",
-            "\t6 { }",
+            "\t6",
             ");"
         ],
         "is_steady_state": false,
@@ -14503,7 +14500,7 @@
             "\t\tsuccessfully imported. 1 CSP, BlobType or KeyBLOB parameters invalid.",
             "\t\tX Any other value is an error from CryptImportKey. }",
             "\t0, { 1 }",
-            "\tX { }",
+            "\tX",
             ");"
         ],
         "is_steady_state": false,
@@ -15704,7 +15701,7 @@
             "\t\tthe key values. }",
             "\t0, { 1 }",
             "\t2, { 3 }",
-            "\t4 { }",
+            "\t4",
             ");"
         ],
         "is_steady_state": false,
@@ -15788,7 +15785,7 @@
             "\t\tType 0 - Match all 1 0 Normal 2 1 Array 4 2 Parameter 8 3 Module }",
             "\t0, { 1 }",
             "\t2, { 4 }",
-            "\t8 { }",
+            "\t8",
             ");"
         ],
         "is_steady_state": false,
@@ -18024,7 +18021,7 @@
             "\t3, { 4 }",
             "\t5, { 6 }",
             "\t7, { 8 }",
-            "\t9 { }",
+            "\t9",
             ");"
         ],
         "is_steady_state": true,
@@ -18057,7 +18054,7 @@
             "\t\trange 6 Temperature T outside range 7 Pressure P outside range }",
             "\t1, { 2 }",
             "\t3, { 6 }",
-            "\t7 { }",
+            "\t7",
             ");"
         ],
         "is_steady_state": true,
@@ -18376,7 +18373,7 @@
             "\t\tBitwise Parameters & Operations ) Bit Meaning when set 0 Digital 1",
             "\t\tAnalog 2 Text }",
             "\t0, { 1 }",
-            "\t2 { }",
+            "\t2",
             ");"
         ],
         "is_steady_state": true,
@@ -18563,7 +18560,7 @@
             "\t\tis included when the vertical alignment is calculated, is determined",
             "\t\tby the value of AlignTitle. Defaults to 0 if invalid. }",
             "\t0, { 1 }",
-            "\t2 { }",
+            "\t2",
             ");"
         ],
         "is_steady_state": true,
@@ -18724,7 +18721,7 @@
             "\taRGB string, { Brush }",
             "\tBrush object, { Palette index }",
             "\tSystem color, { -1 (transparent line) }",
-            "\taRGB string { }",
+            "\taRGB string",
             ");"
         ],
         "is_steady_state": true,
@@ -18788,7 +18785,7 @@
             "\t2, { 3 }",
             "\t4, { 5 }",
             "\t6, { 7 }",
-            "\t8 { }",
+            "\t8",
             ");"
         ],
         "is_steady_state": true,
@@ -18949,7 +18946,7 @@
             "\t\tcalculated is determined by the value of AlignTitle. The default value",
             "\t\tis 0. }",
             "\t0, { 1 }",
-            "\t2 { }",
+            "\t2",
             ");"
         ],
         "is_steady_state": true,
@@ -19785,7 +19782,7 @@
             "\t\t(See: Bitwise Parameters & Operations ) }",
             "\t1, { 2 }",
             "\t4, { 8 }",
-            "\t16 { }",
+            "\t16",
             ");"
         ],
         "is_steady_state": true,
@@ -20857,7 +20854,7 @@
             "\t\tcalculated is determined by the value of AlignTitle. The default value",
             "\t\tis 0. }",
             "\t0, { 1 }",
-            "\t2 { }",
+            "\t2",
             ");"
         ],
         "is_steady_state": true,
@@ -22427,7 +22424,7 @@
             "\t14, { 15 }",
             "\t16, { 17 }",
             "\t18, { 19 }",
-            "\t20 { }",
+            "\t20",
             ");"
         ],
         "is_steady_state": false,
@@ -24045,7 +24042,7 @@
             "\t\tmay be a timestamp. (See: Bitwise Parameters & Operations ) }",
             "\t0, { 1 }",
             "\t2, { 4 }",
-            "\t8 { }",
+            "\t8",
             ");"
         ],
         "is_steady_state": false,
@@ -26043,7 +26040,7 @@
             "\tn, { o }",
             "\ts, { t }",
             "\tu, { x }",
-            "\tznnn, { }",
+            "\tznnn,",
             "\t0, { 1 }",
             "\t2, { 3 }",
             "\t4, { 5 }",
@@ -26628,13 +26625,13 @@
             "\to, { p }",
             "\ts, { t }",
             "\tu, { x }",
-            "\tX, { }",
+            "\tX,",
             "\t0, { 1 }",
             "\t2, { 3 }",
             "\t4, { 5 }",
             "\t6, { 7 }",
             "\t8, { 9 }",
-            "\t10, { }",
+            "\t10,",
             "\t\\b, { \\f }",
             "\t\\n, { \\r }",
             "\t\\t { \\v }",
@@ -26917,7 +26914,7 @@
             "\t\t) }",
             "\tBit 1, { Bit 2 }",
             "\tBit 3, { Bit 4 }",
-            "\tBit 5 { }",
+            "\tBit 5",
             ");"
         ],
         "is_steady_state": true,
@@ -28810,8 +28807,8 @@
             "\t\tapplication-defined geometry. }",
             "\t0, { 1 }",
             "\t2, { 3 }",
-            "\t4, { }",
-            "\t9 { }",
+            "\t4,",
+            "\t9",
             ");"
         ],
         "is_steady_state": true,
@@ -28987,7 +28984,7 @@
             "\t20, { 21 }",
             "\t22, { 23 }",
             "\t24, { 25 }",
-            "\t26 { }",
+            "\t26",
             ");"
         ],
         "is_steady_state": true,

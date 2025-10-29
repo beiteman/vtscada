@@ -40,8 +40,9 @@ const vscode_1 = require("vscode");
 const retriever_1 = require("./retriever");
 const utils_1 = require("./utils");
 const languages_1 = require("./languages");
+// const languages: Lang[] = ["en", "zh-tw", "zh-cn"];
+const languages = ["en"];
 const defaultLang = 'en';
-const recognizedLangs = ['en', 'zh-tw', 'zh-cn'];
 const topK = 5;
 async function getInlineCompletionItems(retriever, document, position, query) {
     const character = position.character > 0 ? position.character : 1;
@@ -82,15 +83,22 @@ async function getInlineCompletionItems(retriever, document, position, query) {
 function activate(context) {
     // model init --------------------------
     const retrieverByLang = new Map();
-    const languages = ["en", "zh-tw", "zh-cn"];
+    const loadedRetrievers = new Map();
+    languages.forEach(lang => {
+        loadedRetrievers.set(lang, false);
+    });
     languages.forEach(lang => {
         const modelInfoPath = path.join(context.extensionPath, "resources", `info.${lang}.json`);
         const modelPath = path.join(context.extensionPath, "resources", `model.${lang}.onnx`);
         const docsPath = path.join(context.extensionPath, "resources", `docs.${lang}.json`);
         retriever_1.FuncDocumentRetriever.create(modelPath, modelInfoPath, docsPath)
-            .then(retriever => retrieverByLang.set(lang, retriever))
+            .then(retriever => {
+            retrieverByLang.set(lang, retriever);
+            loadedRetrievers.set(lang, true);
+            vscode.window.showInformationMessage(`Model is loaded "${lang}"`);
+        })
             .catch(error => {
-            console.error(`FuncDocumentRetriever(${lang})`, error);
+            vscode.window.showErrorMessage(`Error loading model (${lang}): "${error}"`);
             return Promise.reject(error);
         });
     });
@@ -110,18 +118,22 @@ function activate(context) {
                     return { items: [] };
                 try {
                     // check the query language
-                    const lang = langIdentifier.identify(query, defaultLang, recognizedLangs);
+                    const lang = langIdentifier.identify(query, defaultLang, languages);
                     const retriever = retrieverByLang.get(lang);
+                    const isLoaded = loadedRetrievers.get(lang);
                     if (retriever !== undefined) {
                         let items = await getInlineCompletionItems(retriever, document, position, query);
                         return { items: items };
                     }
+                    else if (isLoaded) {
+                        await vscode.window.showErrorMessage(`Model not found "${lang}"`);
+                    }
                     else {
-                        console.warn(`Model not found "${lang}"`);
+                        await vscode.window.showInformationMessage("Still loading ...");
                     }
                 }
                 catch (error) {
-                    console.log(error);
+                    await vscode.window.showErrorMessage(`Error: "${error}"`);
                 }
             }
             return { items: [] };
