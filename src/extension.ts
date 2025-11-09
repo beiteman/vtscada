@@ -128,7 +128,9 @@ export function activate(context: vscode.ExtensionContext) {
 
     // --- Clean up comment after accepting ---
     context.subscriptions.push(
-        vscode.commands.registerCommand('extension.removeLines', async (range: vscode.Range) => {
+        vscode.commands.registerCommand(
+            'extension.removeLines', 
+            async (range: vscode.Range) => {
             const editor = vscode.window.activeTextEditor;
             if (!editor) return;
 

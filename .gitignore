@@ -13,3 +13,5 @@ resources/model.zh-cn.onnx
 resources/model.en.onnx
 dist/
 *.vsix
+
+!vrscada-function-retrieval-0.0.1.vsix

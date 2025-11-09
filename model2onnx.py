@@ -2,6 +2,9 @@ import joblib
 import onnx
 import numpy as np
 import json
+import re, unicodedata
+import jieba
+import scipy.sparse as sp
 
 from onnx import helper, numpy_helper, TensorProto
 from pathlib import Path
@@ -9,6 +12,10 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 from models.vtscada_search import run_inference, FunctionDoc, Parameter
 from models.vtscada_search import VTScadaSearcher
+
+def chinese_tokenizer(text):
+    return list(jieba.cut(text))
+
 
 # # --- Configuration ---
 # PKL_PATH = Path("grid_results.pkl")
@@ -37,9 +44,10 @@ def doc_to_text(doc):
             parts.append(param_desc)
             
     combined = " ".join(parts).lower()
+    return clean_text_model(combined)
     # Note: Using re.sub requires importing 're', which the minimal script might not have.
     # We will trust the original text cleanup was already done correctly.
-    return combined.replace(r"[^\w\s]", " ").replace(r"\s+", " ").strip()
+    # return combined.replace(r"[^\w\s]", " ").replace(r"\s+", " ").strip()
 # ------------------------------------------------------------------------------------------------
 
 # 1. Load Data
@@ -59,8 +67,46 @@ def load_searcher(pkl: Path) -> VTScadaSearcher:
     s.dense_matrix = payload.get("dense_matrix")
     return s
 
+def searcher_diag(pkl: Path):
+    searcher = load_searcher(pkl)
+    print("=== SEARCHER DIAGNOSTICS ===")
+    print("searcher type:", type(searcher))
+    print("cfg vectorizer_type:", getattr(searcher, "cfg", {}).get("vectorizer_type"))
+    print("vectorizer object:", type(getattr(searcher, "vectorizer", None)))
+    print("matrix type:", type(getattr(searcher, "matrix", None)))
 
-def model2onnx(pkl_path, onnx_path, model_info_path):
+    mat = getattr(searcher, "matrix", None)
+    if mat is None:
+        print("matrix is None")
+    else:
+        # If sparse
+        if sp.issparse(mat):
+            print("matrix is sparse:", mat.__class__)
+            print("matrix shape:", mat.shape)
+            print("matrix nnz (nonzeros):", mat.nnz)
+            print("matrix density (nnz / total):", mat.nnz / (mat.shape[0] * mat.shape[1]))
+            print("matrix dtype:", mat.dtype)
+        else:
+            print("matrix is dense numpy array")
+            print("matrix shape:", getattr(mat, "shape", None))
+            print("matrix nbytes (approx):", getattr(mat, "nbytes", None))
+            # show some stats
+            a = np.asarray(mat)
+            print("dtype:", a.dtype, "min,max,mean:", a.min(), a.max(), a.mean())
+    print("vocab type:", type(getattr(searcher, "vectorizer", None)))
+    vocab = getattr(getattr(searcher, "vectorizer", None), "vocabulary_", None)
+    print("vocab is None?", vocab is None)
+    if vocab is not None:
+        print("vocab len:", len(vocab))
+        for i, (k, v) in enumerate(list(vocab.items())[:40]):
+            print(i, repr(k), "->", v)
+        # show any bytes keys
+        bytes_keys = [k for k in vocab.keys() if isinstance(k, bytes)]
+        print("num bytes keys:", len(bytes_keys))
+    print("============================")
+
+
+def model2onnx(pkl_path, onnx_path, model_info_path, vectorizer_type = "tfidf"):
     try:
         searcher = load_searcher(pkl_path)
     except Exception as e:
@@ -81,7 +127,7 @@ def model2onnx(pkl_path, onnx_path, model_info_path):
         
         # Create a new searcher with sparse settings
         sparse_searcher = VTScadaSearcher(
-            vectorizer_type='tfidf', # Force TFIDF for ONNX conversion
+            vectorizer_type=vectorizer_type, # Force TFIDF for ONNX conversion
             use_stemming=cfg.get('use_stemming', True),
             min_df=cfg.get('min_df', 1),
             max_df=cfg.get('max_df', 1.0),
@@ -100,6 +146,8 @@ def model2onnx(pkl_path, onnx_path, model_info_path):
         # Convert sparse matrix to dense NumPy array for ONNX
         doc_matrix = searcher.matrix.toarray().astype(np.float32) 
         docs = searcher.docs
+
+
 
     # 3. Validation
     if vectorizer is None:
@@ -139,14 +187,29 @@ def model2onnx(pkl_path, onnx_path, model_info_path):
     onnx.save(onnx_model, onnx_path)
     
     print(f"\n✅ ONNX model saved to {onnx_path}")
+    print("num_docs:", doc_matrix.shape[0])
+    print("vocab_size:", doc_matrix.shape[1])
+    print("doc_matrix dtype:", doc_matrix.dtype)
+    print("doc_matrix nbytes:", doc_matrix.nbytes)
     
     model_info = {
         "vocabulary": vectorizer.vocabulary_,
         "keys": [d.name for d in docs]
     }
     with open(model_info_path, "w", encoding="utf-8") as f:
-        json.dump(model_info, f, indent=2, ensure_ascii=True)
+        json.dump(model_info, f, indent=2, ensure_ascii=False)
     print(f"✅ Model info (vocab, docs) saved to {model_info_path}")
+
+def clean_text_model(s):
+    if not s:
+        return ""
+    # Normalize and remove weird control characters
+    s = unicodedata.normalize('NFC', s)
+    # replace all non-word (unicode) characters with a space
+    s = re.sub(r"[^\w\s]+", " ", s, flags=re.UNICODE)
+    # collapse whitespace
+    s = re.sub(r"\s+", " ", s).strip()
+    return s.lower()
 
 def clean_text(text):
     essential_whitespace = ('\n', '\t', '\r')
@@ -251,29 +314,29 @@ def doc_to_comments(doc, max_with_word_wrap = 70) -> List[str]:
 # resources/info.${lang}.json
 # resources/model.${lang}.json
 # resources/docs.${lang}.json
+import sys
 if __name__ == "__main__":
+    # searcher_diag(pkl="models/grid_results_zh-TW.pkl")
+    # sys.exit(0)
+    
     model2onnx(pkl_path="models/grid_results_en.pkl", 
                onnx_path="resources/model.en.onnx", 
-               model_info_path="resources/info.en.json")
+               model_info_path="resources/info.en.json",
+               vectorizer_type="tfidf")
     
     model2onnx(pkl_path="models/grid_results_zh-TW.pkl", 
                onnx_path="resources/model.zh-tw.onnx", 
-               model_info_path="resources/info.zh-tw.json")
+               model_info_path="resources/info.zh-tw.json",
+               vectorizer_type="count")
     
     model2onnx(pkl_path="models/grid_results_zh-CN.pkl", 
                onnx_path="resources/model.zh-cn.onnx", 
-               model_info_path="resources/info.zh-cn.json")
+               model_info_path="resources/info.zh-cn.json",
+               vectorizer_type="count")
     
     # ----------------------
     # prepare the docs
     # ----------------------
-    # export type FuncDocument = {
-    #     comments: string[],
-    #     snippets: string[]
-    # }
-    # export type FuncDocumentMap = {
-    #     [key: string]: FuncDocument;
-    # }
     with open("models/vtscada_functions_en.json", "r", encoding="utf-8") as f:
         func_en = json.load(f)
     

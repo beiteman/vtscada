@@ -176,9 +176,11 @@ class VTScadaSearcher:
 
         if self.cfg["vectorizer_type"] == "count":
             if lang in ("zh", "zh-tw", "zh-cn"):
+                print("vectorizer_type count", lang)
                 # character n-grams work well for CJK
                 return CountVectorizer(analyzer="char", **common)
             if lang == "auto":
+                print("vectorizer_type count", lang)
                 # mixed: supply a custom tokenizer so sklearn will still build n-grams
                 return CountVectorizer(tokenizer=lambda s: tokenize(s, "auto"),
                                     preprocessor=None, lowercase=False,
@@ -189,6 +191,7 @@ class VTScadaSearcher:
             return CountVectorizer(stop_words="english", **common)
 
         if self.cfg["vectorizer_type"] == "tfidf":
+            print("vectorizer_type tfidf")
             if lang in ("zh", "zh-tw", "zh-cn"):
                 return TfidfVectorizer(analyzer="char", **common)
             if lang == "auto":
@@ -201,6 +204,7 @@ class VTScadaSearcher:
             return TfidfVectorizer(stop_words="english", **common)
 
         if self.cfg["vectorizer_type"] in ("bm25", "dense"):
+            print("vectorizer_type handled separately")
             return None  # handled separately
 
         raise ValueError("Unknown vectorizer_type")
@@ -211,6 +215,7 @@ class VTScadaSearcher:
         texts = [d.to_text(self.cfg["name_weight"]) for d in docs]
 
         if self.cfg["vectorizer_type"] == "bm25":
+            print(">>>>>>>>>>>>>")
             lang = self.cfg.get("language", "en")
             self.tok_docs = [tokenize(t, language=lang) for t in texts]
             self.bm25 = BM25Okapi(self.tok_docs)
@@ -245,6 +250,7 @@ class VTScadaSearcher:
             self.labels_ = self.km.fit_predict(self.matrix)
 
     def query(self, q: str, top_k=10) -> List[Tuple[int, float]]:
+        print('self.cfg["vectorizer_type"]', self.cfg["vectorizer_type"])
         if self.cfg["vectorizer_type"] == "bm25":
             lang = self.cfg.get("language", "en")
             q_tok = tokenize(q, language=lang)
@@ -713,6 +719,15 @@ def load_model(pkl: Path) -> VTScadaSearcher:
     s.bm25 = payload.get("bm25")
     s.tok_docs = payload.get("tok_docs", [])
     s.dense_matrix = payload.get("dense_matrix")
+    print({
+        "vectorizer": s.vectorizer,
+        # "matrix": s.matrix,
+        # "docs": s.docs,
+        # "labels_": s.labels_,
+        # "bm25": s.bm25,
+        # "tok_docs": s.tok_docs,
+        "dense_matrix": s.dense_matrix,
+    })
     return s
 
 # -----------------------------------------------------------------------

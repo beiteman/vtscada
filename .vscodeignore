@@ -3,3 +3,12 @@ node_modules/
 esbuild.js
 example.SRC
 model2onnx.py
+
+# english only
+resources/docs.zh-cn.json
+resources/info.zh-cn.json
+resources/model.zh-cn.onnx
+
+resources/docs.zh-tw.json
+resources/info.zh-tw.json
+resources/model.zh-tw.onnx
