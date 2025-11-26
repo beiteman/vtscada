@@ -17,7 +17,7 @@ async function main() {
     platform: 'node',
     outfile: 'dist/extension.js',
     // keep onnxruntime-node external so the native addon isn't bundled
-    external: ['vscode', 'onnxruntime-node'],
+    external: ['vscode', 'onnxruntime-node', '*.node', "@node-rs/jieba-*"],
     logLevel: 'warning',
     plugins: [
       /* existing plugin(s) */

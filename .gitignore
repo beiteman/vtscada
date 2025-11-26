@@ -13,5 +13,6 @@ resources/model.zh-cn.onnx
 resources/model.en.onnx
 dist/
 *.vsix
+out/
 
 !vtscada-function-retrieval-0.0.1.vsix

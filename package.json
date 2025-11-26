@@ -2,7 +2,7 @@
   "name": "vtscada-function-retrieval",
   "displayName": "VTScada Function Retrieval",
   "description": "",
-  "version": "0.0.1",
+  "version": "0.1.12",
   "publisher": "vtscada",
   "repository": {
     "type": "git",
@@ -16,14 +16,15 @@
     "Other"
   ],
   "files": [
+    "out/**",
+    "node_modules/onnxruntime-common/**",
+    "node_modules/onnxruntime-node/**",
+    "node_modules/@node-rs/**",
     "resources/model.en.onnx",
-    "resources/model.zh-cn.onnx",
-    "resources/model.zh-tw.onnx",
-    "resources/model_info.en.json",
-    "resources/model_info.zh-cn.json",
-    "resources/model_info.zh-twjsonx",
-    "resources/tfidf_matrix.onnx",
-    "resources/model_info.json"
+    "resources/info.en.json",
+    "resources/docs.en.json",
+    "resources/docs.zh-cn.json",
+    "resources/docs.zh-tw.json"
   ],
   "activationEvents": [
     "onLanguage:vtscadascript"
@@ -61,6 +62,7 @@
     "package": "npm run check-types && node esbuild.js --production"
   },
   "dependencies": {
+    "@node-rs/jieba": "^2.0.1",
     "natural": "^8.1.0",
     "onnxruntime-node": "^1.23.0",
     "vscode-languageclient": "^9.0.1"

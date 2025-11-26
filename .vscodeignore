@@ -1,14 +1,18 @@
 models/
 node_modules/
+!node_modules/onnxruntime-common/**
+!node_modules/onnxruntime-node/**
+!node_modules/@node-rs/**
+dist/
+vtscada-function*
+
 esbuild.js
 example.SRC
 model2onnx.py
 
-# english only
-resources/docs.zh-cn.json
-resources/info.zh-cn.json
-resources/model.zh-cn.onnx
-
-resources/docs.zh-tw.json
-resources/info.zh-tw.json
-resources/model.zh-tw.onnx
+resources/**
+!resources/model.en.onnx
+!resources/info.en.json
+!resources/docs.en.json
+!resources/docs.zh-cn.json
+!resources/docs.zh-tw.json
