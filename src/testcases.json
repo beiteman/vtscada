@@ -1,0 +1,2212 @@
+[
+    {
+        "key": "4BtnDialog",
+        "query": "How to draw a message dialog with multiple buttons?",
+        "lang": "en"
+    },
+    {
+        "key": "4BtnDialog",
+        "query": "System library module for 4 button response",
+        "lang": "en"
+    },
+    {
+        "key": "4BtnDialog",
+        "query": "System module for 3 lines of text dialog",
+        "lang": "en"
+    },
+    {
+        "key": "4BtnDialog",
+        "query": "Which button was pressed in the \\System dialog?",
+        "lang": "en"
+    },
+    {
+        "key": "4BtnDialog",
+        "query": "System 函数库中返回按钮编号的对话框模块",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "4BtnDialog",
+        "query": "四钮对话框",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "4BtnDialog",
+        "query": "在旧版应用中使用反斜线符号调用系统对话框",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "4BtnDialog",
+        "query": "如何绘制带有 4 个按钮的消息对话框？",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "4BtnDialog",
+        "query": "如何自定义四按钮对话框的文字标签？",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "4BtnDialog",
+        "query": "对话框返回值",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "4BtnDialog",
+        "query": "系统讯息框",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "4BtnDialog",
+        "query": "System 函式庫中返回按鈕編號的對話框模組",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "4BtnDialog",
+        "query": "四鈕對話框",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "4BtnDialog",
+        "query": "在舊版應用中使用反斜線符號呼叫系統對話框",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "4BtnDialog",
+        "query": "如何繪製帶有 4 個按鈕的消息對話框？",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "4BtnDialog",
+        "query": "如何自定義四按鈕對話框的文字標籤？",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "4BtnDialog",
+        "query": "對話框返回值",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "4BtnDialog",
+        "query": "系統訊息框",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "Arc",
+        "query": "Draw a counterclockwise arc on screen",
+        "lang": "en"
+    },
+    {
+        "key": "Arc",
+        "query": "Legacy arc drawing with counterclockwise direction",
+        "lang": "en"
+    },
+    {
+        "key": "Arc",
+        "query": "Legacy function for drawing arcs superseded by GUIArc",
+        "lang": "en"
+    },
+    {
+        "key": "Arc",
+        "query": "以顺时针或逆时针绘制圆弧的相容性设定",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "Arc",
+        "query": "绘制圆弧",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "Arc",
+        "query": "绘制逆时针方向弧形的过时语句",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "Arc",
+        "query": "逆时针弧形",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "Arc",
+        "query": "以順時針或逆時針繪製圓弧的相容性設定",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "Arc",
+        "query": "繪製圓弧",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "Arc",
+        "query": "繪製逆時針方向弧形的過時語句",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "Arc",
+        "query": "逆時針弧形",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "Ball",
+        "query": "How to draw a filled circle?",
+        "lang": "en"
+    },
+    {
+        "key": "Ball",
+        "query": "Simple filled circle drawing command",
+        "lang": "en"
+    },
+    {
+        "key": "Ball",
+        "query": "在屏幕上绘制填充圆形的指令",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "Ball",
+        "query": "绘制圆形填充图案的简易指令",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "Ball",
+        "query": "绘制实心圆",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "Ball",
+        "query": "在螢幕上繪製填充圓形的指令",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "Ball",
+        "query": "繪製圓形填充圖案的簡易指令",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "Ball",
+        "query": "繪製實心圓",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "Bar",
+        "query": "Basic filled bar graphic",
+        "lang": "en"
+    },
+    {
+        "key": "Bar",
+        "query": "Function to draw a filled bar",
+        "lang": "en"
+    },
+    {
+        "key": "Bar",
+        "query": "如何在屏幕上绘制填充长条图？",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "Bar",
+        "query": "用于显示数值进度的填充条形图",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "Bar",
+        "query": "绘制填充条",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "Bar",
+        "query": "如何在螢幕上繪製填充長條圖？",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "Bar",
+        "query": "用於顯示數值進度的填充條形圖",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "Bar",
+        "query": "繪製填充條",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "Bevel",
+        "query": "Draw a titled beveled box",
+        "lang": "en"
+    },
+    {
+        "key": "Bevel",
+        "query": "Titled box for UI sections",
+        "lang": "en"
+    },
+    {
+        "key": "Bevel",
+        "query": "如何绘制具备立体感的带标题框架？",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "Bevel",
+        "query": "绘制带有标题的斜角框",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "Bevel",
+        "query": "绘制斜角框",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "Bevel",
+        "query": "如何繪製具備立體感的帶標題框架？",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "Bevel",
+        "query": "繪製帶有標題的斜角框",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "Bevel",
+        "query": "繪製斜角框",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "Box",
+        "query": "How to draw an empty box?",
+        "lang": "en"
+    },
+    {
+        "key": "Box",
+        "query": "Outline box drawing function",
+        "lang": "en"
+    },
+    {
+        "key": "Box",
+        "query": "在屏幕上绘制空心框",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "Box",
+        "query": "在指定坐标绘制矩形边框",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "Box",
+        "query": "绘制空心框",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "Box",
+        "query": "在指定座標繪製矩形邊框",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "Box",
+        "query": "在螢幕上繪製空心框",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "Box",
+        "query": "繪製空心框",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "Circle",
+        "query": "Legacy statement for drawing circles",
+        "lang": "en"
+    },
+    {
+        "key": "Circle",
+        "query": "Superseded by GUIEllipse for circle drawing",
+        "lang": "en"
+    },
+    {
+        "key": "Circle",
+        "query": "Superseded circle statement for backwards compatibility",
+        "lang": "en"
+    },
+    {
+        "key": "Circle",
+        "query": "圆形相容模式",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "Circle",
+        "query": "将旧版 Circle 函数迁移至 GUIEllipse 的方法",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "Circle",
+        "query": "旧版圆形语句",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "Circle",
+        "query": "被 GUIEllipse 取代的可相容圆形绘制功能",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "Circle",
+        "query": "圓形相容模式",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "Circle",
+        "query": "將舊版 Circle 函數遷移至 GUIEllipse 的方法",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "Circle",
+        "query": "舊版圓形語句",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "Circle",
+        "query": "被 GUIEllipse 取代的可相容圓形繪製功能",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "DrawArcPath",
+        "query": "Exclusive OR arc tool for window drawing",
+        "lang": "en"
+    },
+    {
+        "key": "DrawArcPath",
+        "query": "Tool for drawing white exclusive OR arcs",
+        "lang": "en"
+    },
+    {
+        "key": "DrawArcPath",
+        "query": "开发绘图工具时的白色 XOR 弧线路径",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "DrawArcPath",
+        "query": "弧线绘图工具",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "DrawArcPath",
+        "query": "用于构建绘图工具的互斥或 (XOR) 弧线",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "DrawArcPath",
+        "query": "弧線繪圖工具",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "DrawArcPath",
+        "query": "用於構建繪圖工具的互斥或 (XOR) 弧線",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "DrawArcPath",
+        "query": "開發繪圖工具時的白色 XOR 弧線路徑",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "DrawChordPath",
+        "query": "Drawing flattened ellipse sides for tools",
+        "lang": "en"
+    },
+    {
+        "key": "DrawChordPath",
+        "query": "Drawing flattened elliptical sides in tools",
+        "lang": "en"
+    },
+    {
+        "key": "DrawChordPath",
+        "query": "在窗口中绘制白色 XOR 弦形路径",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "DrawChordPath",
+        "query": "弦形路径工具",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "DrawChordPath",
+        "query": "绘制夹角大于 180 度的椭圆切片",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "DrawChordPath",
+        "query": "在視窗中繪製白色 XOR 弦形路徑",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "DrawChordPath",
+        "query": "弦形路徑工具",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "DrawChordPath",
+        "query": "繪製夾角大於 180 度的橢圓切片",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "DrawEllipticalPath",
+        "query": "How to draw an ellipse path in any window?",
+        "lang": "en"
+    },
+    {
+        "key": "DrawEllipticalPath",
+        "query": "XOR white ellipse for drawing tools",
+        "lang": "en"
+    },
+    {
+        "key": "DrawEllipticalPath",
+        "query": "在任何窗口中显示互斥或椭圆路径",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "DrawEllipticalPath",
+        "query": "开发绘图工具时使用的椭圆路径函数",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "DrawEllipticalPath",
+        "query": "椭圆路径工具",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "DrawEllipticalPath",
+        "query": "在任何視窗中顯示互斥或橢圓路徑",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "DrawEllipticalPath",
+        "query": "橢圓路徑工具",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "DrawEllipticalPath",
+        "query": "開發繪圖工具時使用的橢圓路徑函數",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "DrawPath",
+        "query": "Function to draw a white XOR polygon",
+        "lang": "en"
+    },
+    {
+        "key": "DrawPath",
+        "query": "Polygon tool vs PathDraw function differences",
+        "lang": "en"
+    },
+    {
+        "key": "DrawPath",
+        "query": "区分 DrawPath 与 PathDraw 的使用场景",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "DrawPath",
+        "query": "在窗口中绘制白色互斥或多边形",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "DrawPath",
+        "query": "多边形路径",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "DrawPath",
+        "query": "區分 DrawPath 與 PathDraw 的使用場景",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "DrawPath",
+        "query": "在視窗中繪製白色互斥或多邊形",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "DrawPath",
+        "query": "多邊形路徑",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "DrawPiePath",
+        "query": "Drawing a pie shape path for tools",
+        "lang": "en"
+    },
+    {
+        "key": "DrawPiePath",
+        "query": "How to draw a white XOR pie in a window?",
+        "lang": "en"
+    },
+    {
+        "key": "DrawPiePath",
+        "query": "用于图形构建工具的白色饼图路径",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "DrawPiePath",
+        "query": "用于工具开发的白色 XOR 饼图路径",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "DrawPiePath",
+        "query": "饼图路径工具",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "DrawPiePath",
+        "query": "用於圖形構建工具的白色餅圖路徑",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "DrawPiePath",
+        "query": "用於工具開發的白色 XOR 餅圖路徑",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "DrawPiePath",
+        "query": "餅圖路徑工具",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "DrawScale",
+        "query": "Drawing tick marks for linear or radial meters",
+        "lang": "en"
+    },
+    {
+        "key": "DrawScale",
+        "query": "How to draw meter divisions inside a GUITransform?",
+        "lang": "en"
+    },
+    {
+        "key": "DrawScale",
+        "query": "Linear meter tick mark generation",
+        "lang": "en"
+    },
+    {
+        "key": "DrawScale",
+        "query": "Scaling major and minor divisions in GUITransform",
+        "lang": "en"
+    },
+    {
+        "key": "DrawScale",
+        "query": "为线性或径向仪表绘制刻度线",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "DrawScale",
+        "query": "仪表分度",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "DrawScale",
+        "query": "刻度线绘制",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "DrawScale",
+        "query": "在 GUITransform 中缩放主次分度线",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "DrawScale",
+        "query": "在 GUITransform 中设定刻度线的相对尺寸",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "DrawScale",
+        "query": "如何计算仪表刻度的大分度与小分度？",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "DrawScale",
+        "query": "儀表分度",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "DrawScale",
+        "query": "刻度線繪製",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "DrawScale",
+        "query": "在 GUITransform 中縮放主次分度線",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "DrawScale",
+        "query": "在 GUITransform 中設定刻度線的相對尺寸",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "DrawScale",
+        "query": "如何計算儀表刻度的大分度與小分度？",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "DrawScale",
+        "query": "為線性或徑向儀表繪製刻度線",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "Ellipse",
+        "query": "Legacy ellipse drawing replaced by GUIEllipse",
+        "lang": "en"
+    },
+    {
+        "key": "Ellipse",
+        "query": "Legacy ellipse drawing superseded by GUIEllipse",
+        "lang": "en"
+    },
+    {
+        "key": "Ellipse",
+        "query": "旧版椭圆",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "Ellipse",
+        "query": "旧版椭圆绘制语句及其替代方案",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "Ellipse",
+        "query": "旧版椭圆语句与 Z 轴顺序的关系",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "Ellipse",
+        "query": "舊版橢圓",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "Ellipse",
+        "query": "舊版橢圓繪製語句及其替代方案",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "Ellipse",
+        "query": "舊版橢圓語句與 Z 軸順序的關係",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIArc",
+        "query": "Draw an arc that returns Boolean on selection",
+        "lang": "en"
+    },
+    {
+        "key": "GUIArc",
+        "query": "Layered graphics function to draw an arc",
+        "lang": "en"
+    },
+    {
+        "key": "GUIArc",
+        "query": "Mouse selectable arc for layered graphics",
+        "lang": "en"
+    },
+    {
+        "key": "GUIArc",
+        "query": "具备焦点获取功能的层次化圆弧图形",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIArc",
+        "query": "可选取弧形",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIArc",
+        "query": "图层圆弧",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIArc",
+        "query": "绘制可透过鼠标或输入键选取的窗口弧形",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIArc",
+        "query": "具備焦點獲取功能的層次化圓弧圖形",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIArc",
+        "query": "可選取弧形",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIArc",
+        "query": "圖層圓弧",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIArc",
+        "query": "繪製可透過滑鼠或輸入鍵選取的視窗弧形",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIBitmap",
+        "query": "Display JPG PNG or BMP images in a window",
+        "lang": "en"
+    },
+    {
+        "key": "GUIBitmap",
+        "query": "Displaying TIF or EMF images in VTScada",
+        "lang": "en"
+    },
+    {
+        "key": "GUIBitmap",
+        "query": "Layered graphic function for image files",
+        "lang": "en"
+    },
+    {
+        "key": "GUIBitmap",
+        "query": "Performance of anti-aliased image drawing",
+        "lang": "en"
+    },
+    {
+        "key": "GUIBitmap",
+        "query": "VTScada 中 32 位色彩图像的绘制效能",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIBitmap",
+        "query": "图像绘制",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIBitmap",
+        "query": "在 Anywhere Client 中无法显示的图像格式",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIBitmap",
+        "query": "在窗口中显示 JPG、PNG 或 TIF 格式的图像",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIBitmap",
+        "query": "影响图形加速硬件效能的图形绘制功能",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIBitmap",
+        "query": "显示图片",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIBitmap",
+        "query": "VTScada 中 32 位元色彩圖像的繪製效能",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIBitmap",
+        "query": "圖像繪製",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIBitmap",
+        "query": "在 Anywhere Client 中無法顯示的圖像格式",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIBitmap",
+        "query": "在視窗中顯示 JPG、PNG 或 TIF 格式的圖像",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIBitmap",
+        "query": "影響圖形加速硬體效能的圖形繪製功能",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIBitmap",
+        "query": "顯示圖片",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIButton",
+        "query": "Draw a push-button with latching or radio behavior",
+        "lang": "en"
+    },
+    {
+        "key": "GUIButton",
+        "query": "How to create a momentary or toggle button in code?",
+        "lang": "en"
+    },
+    {
+        "key": "GUIButton",
+        "query": "ImageSet structure rules for button states",
+        "lang": "en"
+    },
+    {
+        "key": "GUIButton",
+        "query": "Setting UpLabel and DownLabel for custom buttons",
+        "lang": "en"
+    },
+    {
+        "key": "GUIButton",
+        "query": "切换按钮",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIButton",
+        "query": "单选按钮组",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIButton",
+        "query": "如何使用代码绘制具备切换或单选功能的按钮？",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIButton",
+        "query": "如何设定按钮在鼠标悬停时的图像变化？",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIButton",
+        "query": "建立互斥单选按钮组的代码实例",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIButton",
+        "query": "按钮脚本",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIButton",
+        "query": "自定义按钮 ImageSet 结构的渲染规则",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIButton",
+        "query": "切換按鈕",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIButton",
+        "query": "單選按鈕組",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIButton",
+        "query": "如何使用代碼繪製具備切換或單選功能的按鈕？",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIButton",
+        "query": "如何設定按鈕在滑鼠懸停時的圖像變化？",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIButton",
+        "query": "建立互斥單選按鈕組的代碼實例",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIButton",
+        "query": "按鈕腳本",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIButton",
+        "query": "自定義按鈕 ImageSet 結構的渲染規則",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIChord",
+        "query": "Draw a chord in a window with selection return",
+        "lang": "en"
+    },
+    {
+        "key": "GUIChord",
+        "query": "Selectable layered chord graphic",
+        "lang": "en"
+    },
+    {
+        "key": "GUIChord",
+        "query": "分层弦形",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIChord",
+        "query": "在窗口中绘制分层图形弦形",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIChord",
+        "query": "绘制可传回布尔值的层次化弦形",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIChord",
+        "query": "分層弦形",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIChord",
+        "query": "在視窗中繪製分層圖形弦形",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIChord",
+        "query": "繪製可傳回布林值的層次化弦形",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIEllipse",
+        "query": "Draw a layered ellipse with specific pen width",
+        "lang": "en"
+    },
+    {
+        "key": "GUIEllipse",
+        "query": "Handling pixel rounding errors in concentric ellipses",
+        "lang": "en"
+    },
+    {
+        "key": "GUIEllipse",
+        "query": "分层椭圆",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIEllipse",
+        "query": "如何避免嵌套椭圆的像素取整误差？",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIEllipse",
+        "query": "椭圆像素修正",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIEllipse",
+        "query": "解决嵌套椭圆中的像素舍入误差问题",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIEllipse",
+        "query": "分層橢圓",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIEllipse",
+        "query": "如何避免嵌套橢圓的像素取整誤差？",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIEllipse",
+        "query": "橢圓像素修正",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIEllipse",
+        "query": "解決嵌套橢圓中的像素捨入誤差問題",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIPie",
+        "query": "Drawing interactive pie wedges in windows",
+        "lang": "en"
+    },
+    {
+        "key": "GUIPie",
+        "query": "Function for drawing pie-shaped wedges in a window",
+        "lang": "en"
+    },
+    {
+        "key": "GUIPie",
+        "query": "分层饼图",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIPie",
+        "query": "绘制分层图形中的饼状楔形",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIPie",
+        "query": "绘制可点击的层次化饼状图分块",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIPie",
+        "query": "分層餅圖",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIPie",
+        "query": "繪製分層圖形中的餅狀楔形",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIPie",
+        "query": "繪製可點擊的層次化餅狀圖分塊",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIPipe",
+        "query": "Draw a 3D shaded pipe with miter effect",
+        "lang": "en"
+    },
+    {
+        "key": "GUIPipe",
+        "query": "How to draw a layered shaded pipe?",
+        "lang": "en"
+    },
+    {
+        "key": "GUIPipe",
+        "query": "Layered 3D pipe with 45-degree miter",
+        "lang": "en"
+    },
+    {
+        "key": "GUIPipe",
+        "query": "3D阴影管道",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIPipe",
+        "query": "使用顶点模式 4 保持管道右角效果",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIPipe",
+        "query": "斜接管道",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIPipe",
+        "query": "绘制具备 45 度斜接效果的三维阴影管道",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIPipe",
+        "query": "3D陰影管道",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIPipe",
+        "query": "使用頂點模式 4 保持管道右角效果",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIPipe",
+        "query": "斜接管道",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIPipe",
+        "query": "繪製具備 45 度斜接效果的三維陰影管道",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIPolygon",
+        "query": "Bezier curve control for multi-sided shapes",
+        "lang": "en"
+    },
+    {
+        "key": "GUIPolygon",
+        "query": "Draw multi-sided polygons with Bezier curves",
+        "lang": "en"
+    },
+    {
+        "key": "GUIPolygon",
+        "query": "Bezier曲线",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIPolygon",
+        "query": "使用 Bezier 曲线控制顶点的多边形绘制",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIPolygon",
+        "query": "分层多边形",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIPolygon",
+        "query": "利用 Bezier 曲线控点调整多边形形状",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIPolygon",
+        "query": "Bezier曲線",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIPolygon",
+        "query": "使用 Bezier 曲線控制頂點的多邊形繪製",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIPolygon",
+        "query": "分層多邊形",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIPolygon",
+        "query": "利用 Bezier 曲線控點調整多邊形形狀",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIRectangle",
+        "query": "Basic layered rectangle with focus detection",
+        "lang": "en"
+    },
+    {
+        "key": "GUIRectangle",
+        "query": "Layered graphics function to draw a rectangle",
+        "lang": "en"
+    },
+    {
+        "key": "GUIRectangle",
+        "query": "分层矩形",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIRectangle",
+        "query": "在窗口中绘制可选取的分层矩形",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIRectangle",
+        "query": "层次化矩形在窗口中的定位与缩放",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIRectangle",
+        "query": "分層矩形",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIRectangle",
+        "query": "在視窗中繪製可選取的分層矩形",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIRectangle",
+        "query": "層次化矩形在視窗中的定位與縮放",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIText",
+        "query": "Draw formatted UTF-8 text in a window",
+        "lang": "en"
+    },
+    {
+        "key": "GUIText",
+        "query": "Formatting text like BuffWrite in a window",
+        "lang": "en"
+    },
+    {
+        "key": "GUIText",
+        "query": "How to display centered text without line breaks?",
+        "lang": "en"
+    },
+    {
+        "key": "GUIText",
+        "query": "UTF-8文字",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIText",
+        "query": "在窗口中心绘制 UTF-8 格式化文本",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIText",
+        "query": "在窗口中绘制 UTF-8 编码的格式化文本",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIText",
+        "query": "格式化文本",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUIText",
+        "query": "UTF-8文字",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIText",
+        "query": "在視窗中心繪製 UTF-8 格式化文本",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIText",
+        "query": "在視窗中繪製 UTF-8 編碼的格式化文本",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUIText",
+        "query": "格式化文本",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUITransform",
+        "query": "Apply scaling and rotation to a group of graphics",
+        "lang": "en"
+    },
+    {
+        "key": "GUITransform",
+        "query": "Applying rotation and native size scaling to modules",
+        "lang": "en"
+    },
+    {
+        "key": "GUITransform",
+        "query": "Draggable palette rendering for drop targets",
+        "lang": "en"
+    },
+    {
+        "key": "GUITransform",
+        "query": "How to move and scale multiple objects together?",
+        "lang": "en"
+    },
+    {
+        "key": "GUITransform",
+        "query": "同步移动与缩放一组活动图形符号",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUITransform",
+        "query": "图形缩放",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUITransform",
+        "query": "坐标变换",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUITransform",
+        "query": "如何使一组对象一起移动和缩放？",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUITransform",
+        "query": "对模块中的所有图形应用缩放或旋转变换",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUITransform",
+        "query": "拖动变换对象时的调色板渲染机制",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUITransform",
+        "query": "组合移动",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "GUITransform",
+        "query": "同步移動與縮放一組活動圖形符號",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUITransform",
+        "query": "圖形縮放",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUITransform",
+        "query": "如何使一組對象一起移動和縮放？",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUITransform",
+        "query": "對模組中的所有圖形應用縮放或旋轉變換",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUITransform",
+        "query": "座標變換",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUITransform",
+        "query": "拖動變換對象時的調色盤渲染機制",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "GUITransform",
+        "query": "組合移動",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "HScrollbar",
+        "query": "Draw a horizontal scrollbar in a script",
+        "lang": "en"
+    },
+    {
+        "key": "HScrollbar",
+        "query": "Handling mouse wheel messages for horizontal scrolls",
+        "lang": "en"
+    },
+    {
+        "key": "HScrollbar",
+        "query": "为自定义图形添加水平卷轴导航",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "HScrollbar",
+        "query": "在自定义脚本图形中绘制水平卷轴",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "HScrollbar",
+        "query": "水平卷轴",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "HScrollbar",
+        "query": "在自定義腳本圖形中繪製水平捲軸",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "HScrollbar",
+        "query": "水平捲軸",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "HScrollbar",
+        "query": "為自定義圖形添加水平捲軸導航",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "IconMarker",
+        "query": "Cycling icons for questionable data status",
+        "lang": "en"
+    },
+    {
+        "key": "IconMarker",
+        "query": "Display question or exclamation marks for data status",
+        "lang": "en"
+    },
+    {
+        "key": "IconMarker",
+        "query": "如何周期性切换显示手动数据标签？",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "IconMarker",
+        "query": "循环显示问号或感叹号图标以表示数据状态",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "IconMarker",
+        "query": "数据标记",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "IconMarker",
+        "query": "状态图示",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "IconMarker",
+        "query": "如何週期性切換顯示手動數據標籤？",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "IconMarker",
+        "query": "循環顯示問號或感嘆號圖標以表示數據狀態",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "IconMarker",
+        "query": "數據標記",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "IconMarker",
+        "query": "狀態圖示",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "PathDraw",
+        "query": "Function to create a GUIPolygon path",
+        "lang": "en"
+    },
+    {
+        "key": "PathDraw",
+        "query": "Idea Studio handler for drawing pipes and lines",
+        "lang": "en"
+    },
+    {
+        "key": "PathDraw",
+        "query": "Setting Pen style to 100 for pipe drawing",
+        "lang": "en"
+    },
+    {
+        "key": "PathDraw",
+        "query": "在 Idea Studio 中设置画笔样式 100 以绘制管道",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "PathDraw",
+        "query": "在 Idea Studio 处理程序中定义路径外观",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "PathDraw",
+        "query": "画笔样式100",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "PathDraw",
+        "query": "路径外观",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "PathDraw",
+        "query": "在 Idea Studio 中設置畫筆樣式 100 以繪製管道",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "PathDraw",
+        "query": "在 Idea Studio 處理程序中定義路徑外觀",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "PathDraw",
+        "query": "畫筆樣式100",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "PathDraw",
+        "query": "路徑外觀",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "RadialLegend",
+        "query": "Draw text labels for a radial meter",
+        "lang": "en"
+    },
+    {
+        "key": "RadialLegend",
+        "query": "Scaling text labels for meter drawings",
+        "lang": "en"
+    },
+    {
+        "key": "RadialLegend",
+        "query": "为径向仪表绘制恒定半径的文本标签",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "RadialLegend",
+        "query": "仪表文字",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "RadialLegend",
+        "query": "径向标签",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "RadialLegend",
+        "query": "解决非 True-Type 字体在径向仪表不缩放的问题",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "RadialLegend",
+        "query": "儀表文字",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "RadialLegend",
+        "query": "徑向標籤",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "RadialLegend",
+        "query": "為徑向儀表繪製恆定半徑的文本標籤",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "RadialLegend",
+        "query": "解決非 True-Type 字體在徑向儀表不縮放的問題",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "RadioButtons",
+        "query": "Grouping mutually exclusive labeled buttons",
+        "lang": "en"
+    },
+    {
+        "key": "RadioButtons",
+        "query": "System library module for labeled radio button sets",
+        "lang": "en"
+    },
+    {
+        "key": "RadioButtons",
+        "query": "单选钮组",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "RadioButtons",
+        "query": "在系统库中绘制带边框的单选按钮组",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "RadioButtons",
+        "query": "带框按钮",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "RadioButtons",
+        "query": "绘制带有标题和边框的一组单选按钮",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "RadioButtons",
+        "query": "單選鈕組",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "RadioButtons",
+        "query": "在系統庫中繪製帶邊框的單選按鈕組",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "RadioButtons",
+        "query": "帶框按鈕",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "RadioButtons",
+        "query": "繪製帶有標題和邊框的一組單選按鈕",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "Spinbox",
+        "query": "Draw a spinbox with an optional label",
+        "lang": "en"
+    },
+    {
+        "key": "Spinbox",
+        "query": "Prompting user to save changes via trigger parameter",
+        "lang": "en"
+    },
+    {
+        "key": "Spinbox",
+        "query": "变动触发",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "Spinbox",
+        "query": "数值微调框",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "Spinbox",
+        "query": "监控数值变动并提示保存的触发机制",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "Spinbox",
+        "query": "绘制带有触发参数的数值微调框",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "Spinbox",
+        "query": "數值微調框",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "Spinbox",
+        "query": "監控數值變動並提示保存的觸發機制",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "Spinbox",
+        "query": "繪製帶有觸發參數的數值微調框",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "Spinbox",
+        "query": "變動觸發",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "SplitList",
+        "query": "Handling Shift and Ctrl multi-selections",
+        "lang": "en"
+    },
+    {
+        "key": "SplitList",
+        "query": "Two column listbox with multi-select support",
+        "lang": "en"
+    },
+    {
+        "key": "SplitList",
+        "query": "使用 Ctrl 与 Shift 键进行列表多重选择",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "SplitList",
+        "query": "列表多选",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "SplitList",
+        "query": "双列列表",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "SplitList",
+        "query": "绘制支持多选的双列列表框",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "SplitList",
+        "query": "使用 Ctrl 與 Shift 鍵進行列表多重選擇",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "SplitList",
+        "query": "列表多選",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "SplitList",
+        "query": "繪製支持多選的雙列列表框",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "SplitList",
+        "query": "雙列列表",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "SplitListSelector",
+        "query": "UI tool for transferring items between two grids",
+        "lang": "en"
+    },
+    {
+        "key": "SplitListSelector",
+        "query": "Unique key comparison for grid list transfers",
+        "lang": "en"
+    },
+    {
+        "key": "SplitListSelector",
+        "query": "在双列网格中移动项目的唯一键比较",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "SplitListSelector",
+        "query": "用于在两个网格列表之间转移项目的 UI 工具",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "SplitListSelector",
+        "query": "网格转移",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "SplitListSelector",
+        "query": "项目选择器",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "SplitListSelector",
+        "query": "在雙列網格中移動項目的唯一鍵比較",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "SplitListSelector",
+        "query": "用於在兩個網格列表之間轉移項目的 UI 工具",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "SplitListSelector",
+        "query": "網格轉移",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "SplitListSelector",
+        "query": "項目選擇器",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "SplitTagSelector",
+        "query": "Select and transfer tag names between lists",
+        "lang": "en"
+    },
+    {
+        "key": "SplitTagSelector",
+        "query": "Transferring tag names and descriptions between grids",
+        "lang": "en"
+    },
+    {
+        "key": "SplitTagSelector",
+        "query": "在窗口中选择并转移标签名称的工具",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "SplitTagSelector",
+        "query": "标签转移",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "SplitTagSelector",
+        "query": "标签选择器",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "SplitTagSelector",
+        "query": "筛选并转移标签名称及其描述",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "SplitTagSelector",
+        "query": "在視窗中選擇並轉移標籤名稱的工具",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "SplitTagSelector",
+        "query": "標籤轉移",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "SplitTagSelector",
+        "query": "標籤選擇器",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "SplitTagSelector",
+        "query": "篩選並轉移標籤名稱及其描述",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "ToolBar",
+        "query": "Draw and maintain toolbar buttons",
+        "lang": "en"
+    },
+    {
+        "key": "ToolBar",
+        "query": "Managing interactive toolbar objects",
+        "lang": "en"
+    },
+    {
+        "key": "ToolBar",
+        "query": "工具栏对象",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "ToolBar",
+        "query": "构建具备交互功能的导航工具栏",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "ToolBar",
+        "query": "绘制并维护工具栏及其按钮对象",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "ToolBar",
+        "query": "工具列物件",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "ToolBar",
+        "query": "構建具備交互功能的導航工具列",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "ToolBar",
+        "query": "繪製並維護工具列及其按鈕物件",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "VScrollbar",
+        "query": "Calculating StepSize and PageLen for alarm lists",
+        "lang": "en"
+    },
+    {
+        "key": "VScrollbar",
+        "query": "Draw a vertical scrollbar with custom page length",
+        "lang": "en"
+    },
+    {
+        "key": "VScrollbar",
+        "query": "How to calculate steps and page size for scrolling?",
+        "lang": "en"
+    },
+    {
+        "key": "VScrollbar",
+        "query": "Native windows scrollbar for vertical navigation",
+        "lang": "en"
+    },
+    {
+        "key": "VScrollbar",
+        "query": "在脚本中使用原生窗口卷轴处理鼠标滚轮",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "VScrollbar",
+        "query": "垂直卷轴",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "VScrollbar",
+        "query": "处理自定义脚本图形中的鼠标轮消息",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "VScrollbar",
+        "query": "如何设定垂直卷轴的页面长度与步长？",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "VScrollbar",
+        "query": "计算垂直卷轴的步长 (Steps) 与页面长度 (PageLen)",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "VScrollbar",
+        "query": "设定页长",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "VScrollbar",
+        "query": "在腳本中使用原生視窗捲軸處理滑鼠滾輪",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "VScrollbar",
+        "query": "垂直捲軸",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "VScrollbar",
+        "query": "如何設定垂直捲軸的頁面長度與步長？",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "VScrollbar",
+        "query": "處理自定義腳本圖形中的滑鼠輪消息",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "VScrollbar",
+        "query": "計算垂直捲軸的步長 (Steps) 與頁面長度 (PageLen)",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "VScrollbar",
+        "query": "設定頁長",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "ZBar",
+        "query": "Draw a layered bar for text mode editing",
+        "lang": "en"
+    },
+    {
+        "key": "ZBar",
+        "query": "Text-mode only layered bar",
+        "lang": "en"
+    },
+    {
+        "key": "ZBar",
+        "query": "仅用于文本模式编辑的分层长条",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "ZBar",
+        "query": "在文本模式下快速绘制简单分层长条",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "ZBar",
+        "query": "文本模式长条",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "ZBar",
+        "query": "僅用於文本模式編輯的分層長條",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "ZBar",
+        "query": "在文本模式下快速繪製簡單分層長條",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "ZBar",
+        "query": "文本模式長條",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "ZBox",
+        "query": "Drawing boxes in non-Idea Studio modules",
+        "lang": "en"
+    },
+    {
+        "key": "ZBox",
+        "query": "Text-only layered box graphic",
+        "lang": "en"
+    },
+    {
+        "key": "ZBox",
+        "query": "在非 Idea Studio 环境中绘制分层方框",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "ZBox",
+        "query": "文本模式下不可在 Idea Studio 编辑的方框",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "ZBox",
+        "query": "文本模式方框",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "ZBox",
+        "query": "在非 Idea Studio 環境中繪製分層方框",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "ZBox",
+        "query": "文本模式下不可在 Idea Studio 編輯的方框",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "ZBox",
+        "query": "文本模式方框",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "ZButton",
+        "query": "Layered button that uses Windows system colors",
+        "lang": "en"
+    },
+    {
+        "key": "ZButton",
+        "query": "Text-mode button returning 1 on left click",
+        "lang": "en"
+    },
+    {
+        "key": "ZButton",
+        "query": "文本模式按钮",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "ZButton",
+        "query": "获取左键点击状态的层次化按钮",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "ZButton",
+        "query": "返回按钮点击状态的分层图形",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "ZButton",
+        "query": "文本模式按鈕",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "ZButton",
+        "query": "獲取左鍵點擊狀態的層次化按鈕",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "ZButton",
+        "query": "返回按鈕點擊狀態的分層圖形",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "ZEditField",
+        "query": "Draw a layered text input field",
+        "lang": "en"
+    },
+    {
+        "key": "ZEditField",
+        "query": "Layered input field status values",
+        "lang": "en"
+    },
+    {
+        "key": "ZEditField",
+        "query": "在窗口中添加不可在瘦客户端编辑的文本框",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "ZEditField",
+        "query": "在窗口中绘制分层文本编辑字段",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "ZEditField",
+        "query": "编辑字段",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "ZEditField",
+        "query": "在視窗中添加不可在瘦客戶端編輯的文本框",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "ZEditField",
+        "query": "在視窗中繪製分層文本編輯欄位",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "ZEditField",
+        "query": "編輯欄位",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "ZGrid",
+        "query": "Draw a layered point grid in a window",
+        "lang": "en"
+    },
+    {
+        "key": "ZGrid",
+        "query": "Point grid for text-mode editing",
+        "lang": "en"
+    },
+    {
+        "key": "ZGrid",
+        "query": "分层网格",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "ZGrid",
+        "query": "在特定窗口区域绘制点网格",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "ZGrid",
+        "query": "绘制分层点网格的文本模式功能",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "ZGrid",
+        "query": "分層網格",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "ZGrid",
+        "query": "在特定視窗區域繪製點網格",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "ZGrid",
+        "query": "繪製分層點網格的文本模式功能",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "ZLine",
+        "query": "Draw a simple line between coordinates in text mode",
+        "lang": "en"
+    },
+    {
+        "key": "ZLine",
+        "query": "Drawing window lines without the Idea Studio",
+        "lang": "en"
+    },
+    {
+        "key": "ZLine",
+        "query": "分层直线",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "ZLine",
+        "query": "在文本编辑模式下连接两个坐标点",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "ZLine",
+        "query": "在窗口坐标间绘制分层直线",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "ZLine",
+        "query": "分層直線",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "ZLine",
+        "query": "在文本編輯模式下連接兩個座標點",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "ZLine",
+        "query": "在視窗座標間繪製分層直線",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "ZPipe",
+        "query": "Layered 3D pipe for text mode editing",
+        "lang": "en"
+    },
+    {
+        "key": "ZPipe",
+        "query": "Mitered 3D pipe for legacy text editing",
+        "lang": "en"
+    },
+    {
+        "key": "ZPipe",
+        "query": "具备 45 度斜接效果的文本模式管道",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "ZPipe",
+        "query": "在文本编辑模式下绘制三维管道图形",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "ZPipe",
+        "query": "文本模式管道",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "ZPipe",
+        "query": "具備 45 度斜接效果的文本模式管道",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "ZPipe",
+        "query": "在文本編輯模式下繪製三維管道圖形",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "ZPipe",
+        "query": "文本模式管道",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "ZText",
+        "query": "Draw a layered text label without tab support",
+        "lang": "en"
+    },
+    {
+        "key": "ZText",
+        "query": "Layered labels for text-mode windows",
+        "lang": "en"
+    },
+    {
+        "key": "ZText",
+        "query": "分层标签",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "ZText",
+        "query": "在层次化窗口中显示不含制表符的标签",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "ZText",
+        "query": "在窗口中绘制不支持制表符的分层标签",
+        "lang": "zh-cn"
+    },
+    {
+        "key": "ZText",
+        "query": "分層標籤",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "ZText",
+        "query": "在層次化視窗中顯示不含製表符的標籤",
+        "lang": "zh-tw"
+    },
+    {
+        "key": "ZText",
+        "query": "在視窗中繪製不支持製表符的分層標籤",
+        "lang": "zh-tw"
+    }
+]

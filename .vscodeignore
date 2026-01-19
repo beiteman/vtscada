@@ -3,6 +3,8 @@ node_modules/
 !node_modules/onnxruntime-common/**
 !node_modules/onnxruntime-node/**
 !node_modules/@node-rs/**
+!node_modules/stemmer/**
+!node_modules/@huggingface/tokenizers/**
 dist/
 vtscada-function*
 
@@ -11,8 +13,9 @@ example.SRC
 model2onnx.py
 
 resources/**
-!resources/model.en.onnx
-!resources/info.en.json
-!resources/docs.en.json
-!resources/docs.zh-cn.json
-!resources/docs.zh-tw.json
+!resource/**
+docs/**
+
+README.md
+hfdownload.ipynb
+model2onnx2.py

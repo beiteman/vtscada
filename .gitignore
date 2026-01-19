@@ -8,11 +8,17 @@ models/**
 !models/vtscada_functions_zh-TW.json
 !models/vtscada_search.py
 
-resources/model.zh-tw.onnx
-resources/model.zh-cn.onnx
-resources/model.en.onnx
+resources/**
+resource/**
+!resource/index.en.json
+!resource/index.zh-cn.json
+!resource/index.zh-tw.json
 dist/
 *.vsix
 out/
-
-!vtscada-function-retrieval-0.0.1.vsix
+src/*.js
+test/
+*.zip
+*.ipynb
+src/test-results.json
+src/test-results.txt

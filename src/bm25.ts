@@ -40,7 +40,10 @@ export class BM25Retriever {
         	if (Object.prototype.hasOwnProperty.call(instance.docs, id)) {
         		const doc = instance.docs[id];
         		const text = doc.comments.join(" ");
-        		docs.push({id: id, text: text})
+                const snippets = doc.snippets;
+                if (snippets.length > 0) {
+        		    docs.push({id: id, text: text});
+                }
         	}
         }
         instance.bm25 = new BM25(docs, { enableChinese: isChinese });
@@ -49,8 +52,9 @@ export class BM25Retriever {
 
     public async retrieve(query: string, topK: number = 5): Promise<FuncDocument[]> {
         if (this.bm25 == null) throw new Error('this.session is null');
-        const result = this.bm25.search(query, topK)
-        // result.forEach(r => console.log)
+        const result = this.bm25.search(query, topK);
+        console.log(result);
+        result.forEach(r => console.log(r));
         return result.map(r => this.docs[r.id]);
     }
 }

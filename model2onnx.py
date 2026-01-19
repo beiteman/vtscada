@@ -284,6 +284,11 @@ def doc_to_snippets(doc) -> List[str]:
             result.append(f"{fn_name}(")
             for i, param in enumerate(doc["parameters"]):
                 param_desc = clean_text(param["description"])
+                if len(param_desc) > 100:
+                    # select only two sentences
+                    sentences = re.split(r'(?<=[.!?])\s+', param_desc.strip())
+                    param_desc = " ".join(sentences[:2])
+                    
                 comment = "{ " + param_desc + " }" if param_desc.strip() else ""
                 if i < (len(doc["parameters"]) - 1):
                     lines = word_wrap(f"\t{param['name']}, {comment}")
@@ -324,15 +329,15 @@ if __name__ == "__main__":
                model_info_path="resources/info.en.json",
                vectorizer_type="tfidf")
     
-    model2onnx(pkl_path="models/grid_results_zh-TW.pkl", 
-               onnx_path="resources/model.zh-tw.onnx", 
-               model_info_path="resources/info.zh-tw.json",
-               vectorizer_type="count")
+    # model2onnx(pkl_path="models/grid_results_zh-TW.pkl", 
+    #            onnx_path="resources/model.zh-tw.onnx", 
+    #            model_info_path="resources/info.zh-tw.json",
+    #            vectorizer_type="count")
     
-    model2onnx(pkl_path="models/grid_results_zh-CN.pkl", 
-               onnx_path="resources/model.zh-cn.onnx", 
-               model_info_path="resources/info.zh-cn.json",
-               vectorizer_type="count")
+    # model2onnx(pkl_path="models/grid_results_zh-CN.pkl", 
+    #            onnx_path="resources/model.zh-cn.onnx", 
+    #            model_info_path="resources/info.zh-cn.json",
+    #            vectorizer_type="count")
     
     # ----------------------
     # prepare the docs

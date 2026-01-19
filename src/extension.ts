@@ -3,15 +3,20 @@ import * as path from 'path';
 import { Range, Position } from 'vscode';
 import { FuncDocument } from './docs';
 import { TFIDFRetriever } from './tfidf';
+import { STRetriever } from './transformerV2';
 import { getLeadingWhitespace } from './utils';
-import { Lang, LanguageIdentifier } from './languages';
+import { Lang, LanguageIdentifier } from './languagesV2';
 import { BM25Retriever } from './bm25';
 
 const TOP_K: number = 5;
-const DEFAULT_LANG: Lang = 'en';
+
+function sanitize(text: string): string {
+    const clean = text.normalize("NFC");
+    return clean;
+}
 
 async function inlineCompletionItems(
-    retriever: TFIDFRetriever | BM25Retriever,
+    retriever: TFIDFRetriever | BM25Retriever | STRetriever,
     document: vscode.TextDocument,
     position: vscode.Position,
     query: string) {
@@ -25,7 +30,7 @@ async function inlineCompletionItems(
     let leadingWhitespace = getLeadingWhitespace(document.lineAt(position.line - 1).text);
     const result: vscode.InlineCompletionItem[] = [];
     const documents: FuncDocument[] = await retriever.retrieve(query, TOP_K);
-    documents.forEach(item => {
+    documents.forEach((item, index) => {
 
         const comments = item.comments;
         const snippets = item.snippets;
@@ -39,15 +44,15 @@ async function inlineCompletionItems(
         comments.forEach((line, index) => {
             if (index == 0) {
                 // first line
-                insertText = line;
+                insertText = sanitize(line);
             } else {
                 // next lines
-                insertText = `${insertText}\n${leadingWhitespace}${line}`;
+                insertText = `${insertText}\n${leadingWhitespace}${sanitize(line)}`;
             }
         });
 
         snippets.forEach((line, _) => {
-            insertText = `${insertText}\n${leadingWhitespace}${line}`;
+            insertText = `${insertText}\n${leadingWhitespace}${sanitize(line)}`;
         });
 
         result.push({
@@ -67,46 +72,62 @@ async function inlineCompletionItems(
 export function activate(context: vscode.ExtensionContext) {
 
     // model init --------------------------
-    const retrieversTFIDF: Map<Lang, TFIDFRetriever> = new Map();
-    const retrieversBM25: Map<Lang, BM25Retriever> = new Map();
+    const retrieversST: Map<Lang, STRetriever> = new Map();
 
-    // english (TFIDF)
-    const enModelInfoPath = path.join(context.extensionPath, "resources", `info.en.json`);
-    const enModelPath = path.join(context.extensionPath, "resources", `model.en.onnx`);
-    const enDocsPath = path.join(context.extensionPath, "resources", `docs.en.json`);
-    TFIDFRetriever.create(enModelPath, enModelInfoPath, enDocsPath).then(retriever => {
-        retrieversTFIDF.set('en', retriever);
-        vscode.window.showInformationMessage(`loaded "en"`);
-        console.log(`loaded "en"`);
-    }).catch(error => {
-        vscode.window.showErrorMessage(`Error loading model (en): "${error}"`);
-        console.error(error);
-        return Promise.reject(error);
-    });
+    const resPath = path.join(context.extensionPath, "resources", "data");
 
-    // chinese (traditional)
-    const twDocsPath = path.join(context.extensionPath, "resources", `docs.zh-tw.json`);
-    BM25Retriever.create(twDocsPath, true).then(retriever => {
-        retrieversBM25.set('zh-tw', retriever);
-        vscode.window.showInformationMessage(`loaded "zh-tw"`);
-        console.log(`loaded "zh-tw"`);
-    }).catch(error => {
-        vscode.window.showErrorMessage(`Error loading model (zh-tw): "${error}"`);
-        console.error(error);
-        return Promise.reject(error);
-    });
+    // chinese
+    {
+        const lang = 'zh-tw';
+        const basePath = path.join(resPath, "text2vec-base-chinese");
+        const onnxPath = path.join(basePath, "model.onnx");
+        const tokenizerPath = path.join(basePath, "tokenizer.json");
+        const tokenizerConfigPath = path.join(basePath, "tokenizer_config.json");
+        const indexPath = path.join(resPath, `index.${lang}.json`);
+        STRetriever.createAndLoad(onnxPath, tokenizerPath, tokenizerConfigPath, indexPath).then(retriever => {
+            retrieversST.set(lang, retriever);
+            console.log("Loaded!");
+        }).catch(error => {
+            vscode.window.showErrorMessage(`Error ${basePath}: "${error}"`);
+            console.error(error);
+            return Promise.reject(error);
+        });
+    }
 
-    // chinese (simplified)
-    const cnDocsPath = path.join(context.extensionPath, "resources", `docs.zh-cn.json`);
-    BM25Retriever.create(cnDocsPath, true).then(retriever => {
-        retrieversBM25.set('zh-cn', retriever);
-        vscode.window.showInformationMessage(`loaded "zh-cn"`);
-        console.log(`loaded "zh-cn"`);
-    }).catch(error => {
-        vscode.window.showErrorMessage(`Error loading model (zh-cn): "${error}"`);
-        console.error(error);
-        return Promise.reject(error);
-    });
+    {
+        const lang = 'zh-cn';
+        const basePath = path.join(resPath, "text2vec-base-chinese");
+        const onnxPath = path.join(basePath, "model.onnx");
+        const tokenizerPath = path.join(basePath, "tokenizer.json");
+        const tokenizerConfigPath = path.join(basePath, "tokenizer_config.json");
+        const indexPath = path.join(resPath, `index.${lang}.json`);
+        STRetriever.createAndLoad(onnxPath, tokenizerPath, tokenizerConfigPath, indexPath).then(retriever => {
+            retrieversST.set(lang, retriever);
+            console.log("Loaded!");
+        }).catch(error => {
+            vscode.window.showErrorMessage(`Error ${basePath}: "${error}"`);
+            console.error(error);
+            return Promise.reject(error);
+        });
+    }
+
+    // english
+    {
+        const lang = 'en';
+        const basePath = path.join(resPath, "all-MiniLM-L6-v2");
+        const onnxPath = path.join(basePath, "model.onnx");
+        const tokenizerPath = path.join(basePath, "tokenizer.json");
+        const tokenizerConfigPath = path.join(basePath, "tokenizer_config.json");
+        const indexPath = path.join(resPath, `index.${lang}.json`);
+        STRetriever.createAndLoad(onnxPath, tokenizerPath, tokenizerConfigPath, indexPath).then(retriever => {
+            retrieversST.set(lang, retriever);
+            console.log("Loaded!");
+        }).catch(error => {
+            vscode.window.showErrorMessage(`Error ${basePath}: "${error}"`);
+            console.error(error);
+            return Promise.reject(error);
+        });
+    }
 
     // language identifier --------------------------
     const langIdentifier = new LanguageIdentifier();
@@ -123,26 +144,18 @@ export function activate(context: vscode.ExtensionContext) {
                 const query = match[2].trim();
                 if (!query) return { items: [] };
                 try {
-                    // check the query language
-                    const lang = langIdentifier.identify(query, DEFAULT_LANG);
-                    console.log("lang", lang);
-                    console.log("query", query);
-                    if (lang == 'en') {
-                        const retriever = retrieversTFIDF.get('en');
-                        if (retriever == undefined) {
-                            await vscode.window.showErrorMessage(`still loading "${lang}" ...`);
-                        } else {
-                            let items = await inlineCompletionItems(retriever, document, position, query);
-                            return { items: items };
-                        }
+                    let lang = langIdentifier.identify(query);
+                    if (lang == 'Undetermined') {
+                        console.log("Undetermined language for query", query);
+                        lang = 'en'; // default
+                    }
+                    const retriever = retrieversST.get(lang);
+                    if (retriever == undefined) {
+                        await vscode.window.showErrorMessage(`still loading "${lang}" ...`);
                     } else {
-                        const retriever = retrieversBM25.get(lang);
-                        if (retriever == undefined) {
-                            await vscode.window.showErrorMessage(`still loading "${lang}" ...`);
-                        } else {
-                            let items = await inlineCompletionItems(retriever, document, position, query);
-                            return { items: items };
-                        }
+                        console.log(`using model language: ${lang}`);
+                        let items = await inlineCompletionItems(retriever, document, position, query);
+                        return { items: items };
                     }
                 } catch (error) {
                     console.error(error);

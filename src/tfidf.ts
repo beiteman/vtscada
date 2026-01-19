@@ -1,7 +1,7 @@
 import * as ort from 'onnxruntime-node';
 import * as fs from 'fs';
 import { FuncDocument, FuncDocumentMap } from './docs';
-import { STOPWORDS, porterStem } from './natural';
+import { STOPWORDS, porterStem } from './naturalV2';
 
 export class TFIDFRetriever {
     private session: ort.InferenceSession | null = null;
