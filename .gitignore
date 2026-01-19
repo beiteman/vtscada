@@ -22,3 +22,6 @@ test/
 *.ipynb
 src/test-results.json
 src/test-results.txt
+*.py
+create_test.py
+requirements.txt
