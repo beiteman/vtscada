@@ -1,18 +1,16 @@
 import * as path from 'path';
-import { STRetriever } from './transformerV2';
+import { STRetriever } from './src/transformer';
 import { readFileSync, writeFileSync } from 'fs';
 
-const RES_ROOT = path.join("..", "resources", "data");
-const DOCS_EN = path.join("..", "resources", "docs.en.json");
-const DOCS_CN = path.join("..", "resources", "docs.zh-cn.json");
-const DOCS_TW = path.join("..", "resources", "docs.zh-tw.json");
+const RES_ROOT = path.join(".", "resource");
 const INDEX_EN = path.join(RES_ROOT, "index.en.json");
 const INDEX_CN = path.join(RES_ROOT, "index.zh-cn.json");
 const INDEX_TW = path.join(RES_ROOT, "index.zh-tw.json");
 const MODEL_ROOT_EN = path.join(RES_ROOT, "all-MiniLM-L6-v2");
 const MODEL_ROOT_CN = path.join(RES_ROOT, "text2vec-base-chinese");
 const MODEL_ROOT_TW = path.join(RES_ROOT, "text2vec-base-chinese");
-const TESTCASE_FILEPATH = path.join(".", "testcases.json");
+const TESTCASE_FILEPATH = path.join("./tests", "testcases.json");
+const RESULT_FILEPATH = path.join("./tests", "test-results.txt");
 
 interface TestCase {
     key: string;
@@ -84,8 +82,8 @@ async function runTests() {
             report += `>> TOTAL AVERAGE FOR ${lang.toUpperCase()}: ${langTotalAvg.toFixed(4)}\n`;
             report += `==========================================\n\n`;
         }
-        writeFileSync('./test-results.txt', report, 'utf-8');
-        console.log("Detailed report saved to test-results.txt");
+        writeFileSync(RESULT_FILEPATH, report, 'utf-8');
+        console.log(`Detailed report saved to ${RESULT_FILEPATH}`);
     } catch (error) {
         console.error("Test execution failed:", error);
     }

@@ -31,52 +31,28 @@ async function main() {
     // run a single build
     await ctx.rebuild();
     // After successful build, copy the native artifacts we need
-    await copyOnnxruntimeNodeFiles();
+    const foldersToCopy = [
+        'onnxruntime-node',
+        'onnxruntime-common',
+        '@huggingface/tokenizers',
+        '@node-rs',
+        'stemmer'
+    ];
+    for (const pkg of foldersToCopy) {
+        await copyFolderToDist(pkg);
+    }
     await ctx.dispose();
   }
 }
 
-/**
- * Copy the runtime files from node_modules/onnxruntime-node into dist so runtime require() finds
- * the native .node files in the same relative path (e.g. ../bin/napi-v6/darwin/x64/onnxruntime_binding.node).
- */
-async function copyOnnxruntimeNodeFiles() {
-  try {
-    const pkgRoot = path.join(__dirname, 'node_modules', 'onnxruntime-node');
-    const destRoot = path.join(__dirname, 'dist', 'node_modules', 'onnxruntime-node');
-
-    // Ensure destination folder exists
-    ensureDirSync(destRoot);
-
-    // 1) Copy package.json (some modules inspect package metadata)
-    const srcPkg = path.join(pkgRoot, 'package.json');
-    try {
-      copySync(srcPkg, path.join(destRoot, 'package.json'), { overwrite: true });
-      console.log('[copy] onnxruntime-node/package.json copied');
-    } catch (e) {
-      // package.json may not exist in some installs—but normally it does
-      console.warn('[copy] could not copy package.json for onnxruntime-node:', e.message);
+async function copyFolderToDist(pkgName) {
+    const src = path.join(__dirname, 'node_modules', pkgName);
+    const dest = path.join(__dirname, 'dist', 'node_modules', pkgName);
+    if (require('fs').existsSync(src)) {
+        copySync(src, dest, { overwrite: true });
+        console.log(`[copy] ${pkgName} copied to dist`);
     }
-
-    // 2) Copy the bin directory (contains napi builds and .node files)
-    const srcBin = path.join(pkgRoot, 'bin');
-    try {
-      copySync(srcBin, path.join(destRoot, 'bin'), { overwrite: true, recursive: true });
-      console.log('[copy] onnxruntime-node/bin copied');
-    } catch (e) {
-      console.warn('[copy] could not copy onnxruntime-node/bin:', e.message);
-    }
-
-    // Optional: copy any other files you might need (README, dist, build, etc.)
-    // copySync(path.join(pkgRoot, 'dist'), path.join(destRoot, 'dist'), { overwrite: true, recursive: true });
-
-    console.log('[copy] onnxruntime-node runtime files copied to dist');
-  } catch (err) {
-    console.error('[copy] failed to copy onnxruntime-node files:', err);
-    // keep the error non-fatal so you can still inspect build output; decide to exit if you prefer
-  }
 }
-
 /**
  * Problem-matcher plugin you had
  * @type {import('esbuild').Plugin}

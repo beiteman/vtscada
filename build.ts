@@ -1,10 +1,10 @@
 import * as path from 'path';
-import { STRetriever } from './transformerV2';
+import { STRetriever } from './src/transformer';
 
-const RES_ROOT = path.join("..", "resources", "data");
-const DOCS_EN = path.join("..", "resources", "docs.en.json");
-const DOCS_CN = path.join("..", "resources", "docs.zh-cn.json");
-const DOCS_TW = path.join("..", "resources", "docs.zh-tw.json");
+const RES_ROOT = path.join(".", "resources", "data");
+const DOCS_EN = path.join(".", "docs", "docs.en.json");
+const DOCS_CN = path.join(".", "docs", "docs.zh-cn.json");
+const DOCS_TW = path.join(".", "docs", "docs.zh-tw.json");
 const INDEX_EN = path.join(RES_ROOT, "index.en.json");
 const INDEX_CN = path.join(RES_ROOT, "index.zh-cn.json");
 const INDEX_TW = path.join(RES_ROOT, "index.zh-tw.json");

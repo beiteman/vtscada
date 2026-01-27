@@ -2,11 +2,9 @@ import * as vscode from 'vscode';
 import * as path from 'path';
 import { Range, Position } from 'vscode';
 import { FuncDocument } from './docs';
-import { TFIDFRetriever } from './tfidf';
-import { STRetriever } from './transformerV2';
+import { STRetriever } from './transformer';
 import { getLeadingWhitespace } from './utils';
-import { Lang, LanguageIdentifier } from './languagesV2';
-import { BM25Retriever } from './bm25';
+import { Lang, LanguageIdentifier } from './languages';
 
 const TOP_K: number = 5;
 
@@ -16,7 +14,7 @@ function sanitize(text: string): string {
 }
 
 async function inlineCompletionItems(
-    retriever: TFIDFRetriever | BM25Retriever | STRetriever,
+    retriever: STRetriever,
     document: vscode.TextDocument,
     position: vscode.Position,
     query: string) {
@@ -74,7 +72,7 @@ export function activate(context: vscode.ExtensionContext) {
     // model init --------------------------
     const retrieversST: Map<Lang, STRetriever> = new Map();
 
-    const resPath = path.join(context.extensionPath, "resources", "data");
+    const resPath = path.join(context.extensionPath, "resource");
 
     // chinese
     {
@@ -165,9 +163,6 @@ export function activate(context: vscode.ExtensionContext) {
             return { items: [] };
         }
     };
-    // context.subscriptions.push(
-    //     vscode.languages.registerInlineCompletionItemProvider({ pattern: '**' }, provider)
-    // );
     context.subscriptions.push(
         vscode.languages.registerInlineCompletionItemProvider({ language: 'vtscadascript' }, provider)
     );

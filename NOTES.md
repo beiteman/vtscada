@@ -28,10 +28,20 @@ node build.js
 
 ## Test
 
+### Test Retrieval
+
 ```
 cd src
-tsc test.ts
-node test.js
+tsc testRetrieve.ts
+node testRetrieve.js
+```
+
+### Test Lang
+
+```
+cd src
+tsc testLang.ts
+node testLang.js
 ```
 
 ## Build

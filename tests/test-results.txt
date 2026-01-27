@@ -1,0 +1,724 @@
+TEST RESULTS - 1/17/2026, 12:23:56 PM
+==========================================
+
+LANGUAGE: EN
+------------------------------------------
+Key: 4BtnDialog (Avg: 1.0000)
+  - [Score: 1     ] Query: How to draw a message dialog with multiple buttons?
+  - [Score: 1     ] Query: System library module for 4 button response
+  - [Score: 1     ] Query: System module for 3 lines of text dialog
+  - [Score: 1     ] Query: Which button was pressed in the \System dialog?
+
+Key: Arc (Avg: 1.0000)
+  - [Score: 1     ] Query: Draw a counterclockwise arc on screen
+  - [Score: 1     ] Query: Legacy arc drawing with counterclockwise direction
+  - [Score: 1     ] Query: Legacy function for drawing arcs superseded by GUIArc
+
+Key: Ball (Avg: 1.0000)
+  - [Score: 1     ] Query: How to draw a filled circle?
+  - [Score: 1     ] Query: Simple filled circle drawing command
+
+Key: Bar (Avg: 1.0000)
+  - [Score: 1     ] Query: Basic filled bar graphic
+  - [Score: 1     ] Query: Function to draw a filled bar
+
+Key: Bevel (Avg: 1.0000)
+  - [Score: 1     ] Query: Draw a titled beveled box
+  - [Score: 1     ] Query: Titled box for UI sections
+
+Key: Box (Avg: 0.5000)
+  - [Score: 1     ] Query: How to draw an empty box?
+  - [Score: 0     ] Query: Outline box drawing function
+
+Key: Circle (Avg: 1.0000)
+  - [Score: 1     ] Query: Legacy statement for drawing circles
+  - [Score: 1     ] Query: Superseded by GUIEllipse for circle drawing
+  - [Score: 1     ] Query: Superseded circle statement for backwards compatibility
+
+Key: DrawArcPath (Avg: 1.0000)
+  - [Score: 1     ] Query: Exclusive OR arc tool for window drawing
+  - [Score: 1     ] Query: Tool for drawing white exclusive OR arcs
+
+Key: DrawChordPath (Avg: 0.5625)
+  - [Score: 0.125 ] Query: Drawing flattened ellipse sides for tools
+  - [Score: 1     ] Query: Drawing flattened elliptical sides in tools
+
+Key: DrawEllipticalPath (Avg: 0.6250)
+  - [Score: 1     ] Query: How to draw an ellipse path in any window?
+  - [Score: 0.25  ] Query: XOR white ellipse for drawing tools
+
+Key: DrawPath (Avg: 1.0000)
+  - [Score: 1     ] Query: Function to draw a white XOR polygon
+  - [Score: 1     ] Query: Polygon tool vs PathDraw function differences
+
+Key: DrawPiePath (Avg: 0.5000)
+  - [Score: 0     ] Query: Drawing a pie shape path for tools
+  - [Score: 1     ] Query: How to draw a white XOR pie in a window?
+
+Key: DrawScale (Avg: 1.0000)
+  - [Score: 1     ] Query: Drawing tick marks for linear or radial meters
+  - [Score: 1     ] Query: How to draw meter divisions inside a GUITransform?
+  - [Score: 1     ] Query: Linear meter tick mark generation
+  - [Score: 1     ] Query: Scaling major and minor divisions in GUITransform
+
+Key: Ellipse (Avg: 1.0000)
+  - [Score: 1     ] Query: Legacy ellipse drawing replaced by GUIEllipse
+  - [Score: 1     ] Query: Legacy ellipse drawing superseded by GUIEllipse
+
+Key: GUIArc (Avg: 0.0833)
+  - [Score: 0     ] Query: Draw an arc that returns Boolean on selection
+  - [Score: 0     ] Query: Layered graphics function to draw an arc
+  - [Score: 0.25  ] Query: Mouse selectable arc for layered graphics
+
+Key: GUIBitmap (Avg: 0.3438)
+  - [Score: 0.125 ] Query: Display JPG PNG or BMP images in a window
+  - [Score: 0.125 ] Query: Displaying TIF or EMF images in VTScada
+  - [Score: 0.125 ] Query: Layered graphic function for image files
+  - [Score: 1     ] Query: Performance of anti-aliased image drawing
+
+Key: GUIButton (Avg: 0.7500)
+  - [Score: 1     ] Query: Draw a push-button with latching or radio behavior
+  - [Score: 1     ] Query: How to create a momentary or toggle button in code?
+  - [Score: 1     ] Query: ImageSet structure rules for button states
+  - [Score: 0     ] Query: Setting UpLabel and DownLabel for custom buttons
+
+Key: GUIChord (Avg: 0.1250)
+  - [Score: 0.25  ] Query: Draw a chord in a window with selection return
+  - [Score: 0     ] Query: Selectable layered chord graphic
+
+Key: GUIEllipse (Avg: 0.7500)
+  - [Score: 1     ] Query: Draw a layered ellipse with specific pen width
+  - [Score: 0.5   ] Query: Handling pixel rounding errors in concentric ellipses
+
+Key: GUIPie (Avg: 0.1875)
+  - [Score: 0.25  ] Query: Drawing interactive pie wedges in windows
+  - [Score: 0.125 ] Query: Function for drawing pie-shaped wedges in a window
+
+Key: GUIPipe (Avg: 0.4167)
+  - [Score: 0.25  ] Query: Draw a 3D shaded pipe with miter effect
+  - [Score: 0.5   ] Query: How to draw a layered shaded pipe?
+  - [Score: 0.5   ] Query: Layered 3D pipe with 45-degree miter
+
+Key: GUIPolygon (Avg: 0.3125)
+  - [Score: 0.125 ] Query: Bezier curve control for multi-sided shapes
+  - [Score: 0.5   ] Query: Draw multi-sided polygons with Bezier curves
+
+Key: GUIRectangle (Avg: 0.5625)
+  - [Score: 1     ] Query: Basic layered rectangle with focus detection
+  - [Score: 0.125 ] Query: Layered graphics function to draw a rectangle
+
+Key: GUIText (Avg: 0.3333)
+  - [Score: 1     ] Query: Draw formatted UTF-8 text in a window
+  - [Score: 0     ] Query: Formatting text like BuffWrite in a window
+  - [Score: 0     ] Query: How to display centered text without line breaks?
+
+Key: GUITransform (Avg: 0.1250)
+  - [Score: 0     ] Query: Apply scaling and rotation to a group of graphics
+  - [Score: 0     ] Query: Applying rotation and native size scaling to modules
+  - [Score: 0.5   ] Query: Draggable palette rendering for drop targets
+  - [Score: 0     ] Query: How to move and scale multiple objects together?
+
+Key: HScrollbar (Avg: 1.0000)
+  - [Score: 1     ] Query: Draw a horizontal scrollbar in a script
+  - [Score: 1     ] Query: Handling mouse wheel messages for horizontal scrolls
+
+Key: IconMarker (Avg: 1.0000)
+  - [Score: 1     ] Query: Cycling icons for questionable data status
+  - [Score: 1     ] Query: Display question or exclamation marks for data status
+
+Key: PathDraw (Avg: 1.0000)
+  - [Score: 1     ] Query: Function to create a GUIPolygon path
+  - [Score: 1     ] Query: Idea Studio handler for drawing pipes and lines
+  - [Score: 1     ] Query: Setting Pen style to 100 for pipe drawing
+
+Key: RadialLegend (Avg: 0.6250)
+  - [Score: 1     ] Query: Draw text labels for a radial meter
+  - [Score: 0.25  ] Query: Scaling text labels for meter drawings
+
+Key: RadioButtons (Avg: 1.0000)
+  - [Score: 1     ] Query: Grouping mutually exclusive labeled buttons
+  - [Score: 1     ] Query: System library module for labeled radio button sets
+
+Key: Spinbox (Avg: 1.0000)
+  - [Score: 1     ] Query: Draw a spinbox with an optional label
+  - [Score: 1     ] Query: Prompting user to save changes via trigger parameter
+
+Key: SplitList (Avg: 0.7500)
+  - [Score: 0.5   ] Query: Handling Shift and Ctrl multi-selections
+  - [Score: 1     ] Query: Two column listbox with multi-select support
+
+Key: SplitListSelector (Avg: 0.7500)
+  - [Score: 0.5   ] Query: UI tool for transferring items between two grids
+  - [Score: 1     ] Query: Unique key comparison for grid list transfers
+
+Key: SplitTagSelector (Avg: 0.6250)
+  - [Score: 0.25  ] Query: Select and transfer tag names between lists
+  - [Score: 1     ] Query: Transferring tag names and descriptions between grids
+
+Key: ToolBar (Avg: 1.0000)
+  - [Score: 1     ] Query: Draw and maintain toolbar buttons
+  - [Score: 1     ] Query: Managing interactive toolbar objects
+
+Key: VScrollbar (Avg: 0.7500)
+  - [Score: 1     ] Query: Calculating StepSize and PageLen for alarm lists
+  - [Score: 0.5   ] Query: Draw a vertical scrollbar with custom page length
+  - [Score: 1     ] Query: How to calculate steps and page size for scrolling?
+  - [Score: 0.5   ] Query: Native windows scrollbar for vertical navigation
+
+Key: ZBar (Avg: 1.0000)
+  - [Score: 1     ] Query: Draw a layered bar for text mode editing
+  - [Score: 1     ] Query: Text-mode only layered bar
+
+Key: ZBox (Avg: 1.0000)
+  - [Score: 1     ] Query: Drawing boxes in non-Idea Studio modules
+  - [Score: 1     ] Query: Text-only layered box graphic
+
+Key: ZButton (Avg: 0.5313)
+  - [Score: 1     ] Query: Layered button that uses Windows system colors
+  - [Score: 0.0625] Query: Text-mode button returning 1 on left click
+
+Key: ZEditField (Avg: 0.5000)
+  - [Score: 0     ] Query: Draw a layered text input field
+  - [Score: 1     ] Query: Layered input field status values
+
+Key: ZGrid (Avg: 1.0000)
+  - [Score: 1     ] Query: Draw a layered point grid in a window
+  - [Score: 1     ] Query: Point grid for text-mode editing
+
+Key: ZLine (Avg: 1.0000)
+  - [Score: 1     ] Query: Draw a simple line between coordinates in text mode
+  - [Score: 1     ] Query: Drawing window lines without the Idea Studio
+
+Key: ZPipe (Avg: 1.0000)
+  - [Score: 1     ] Query: Layered 3D pipe for text mode editing
+  - [Score: 1     ] Query: Mitered 3D pipe for legacy text editing
+
+Key: ZText (Avg: 1.0000)
+  - [Score: 1     ] Query: Draw a layered text label without tab support
+  - [Score: 1     ] Query: Layered labels for text-mode windows
+
+>> TOTAL AVERAGE FOR EN: 0.7434
+==========================================
+
+LANGUAGE: ZH-CN
+------------------------------------------
+Key: 4BtnDialog (Avg: 0.2857)
+  - [Score: 0     ] Query: System 函数库中返回按钮编号的对话框模块
+  - [Score: 0.5   ] Query: 四钮对话框
+  - [Score: 0     ] Query: 在旧版应用中使用反斜线符号调用系统对话框
+  - [Score: 1     ] Query: 如何绘制带有 4 个按钮的消息对话框？
+  - [Score: 0.5   ] Query: 如何自定义四按钮对话框的文字标签？
+  - [Score: 0     ] Query: 对话框返回值
+  - [Score: 0     ] Query: 系统讯息框
+
+Key: Arc (Avg: 0.0156)
+  - [Score: 0     ] Query: 以顺时针或逆时针绘制圆弧的相容性设定
+  - [Score: 0     ] Query: 绘制圆弧
+  - [Score: 0.0625] Query: 绘制逆时针方向弧形的过时语句
+  - [Score: 0     ] Query: 逆时针弧形
+
+Key: Ball (Avg: 1.0000)
+  - [Score: 1     ] Query: 在屏幕上绘制填充圆形的指令
+  - [Score: 1     ] Query: 绘制圆形填充图案的简易指令
+  - [Score: 1     ] Query: 绘制实心圆
+
+Key: Bar (Avg: 0.8333)
+  - [Score: 1     ] Query: 如何在屏幕上绘制填充长条图？
+  - [Score: 1     ] Query: 用于显示数值进度的填充条形图
+  - [Score: 0.5   ] Query: 绘制填充条
+
+Key: Bevel (Avg: 0.3333)
+  - [Score: 0     ] Query: 如何绘制具备立体感的带标题框架？
+  - [Score: 0     ] Query: 绘制带有标题的斜角框
+  - [Score: 1     ] Query: 绘制斜角框
+
+Key: Box (Avg: 0.0000)
+  - [Score: 0     ] Query: 在屏幕上绘制空心框
+  - [Score: 0     ] Query: 在指定坐标绘制矩形边框
+  - [Score: 0     ] Query: 绘制空心框
+
+Key: Circle (Avg: 0.4688)
+  - [Score: 0.25  ] Query: 圆形相容模式
+  - [Score: 1     ] Query: 将旧版 Circle 函数迁移至 GUIEllipse 的方法
+  - [Score: 0.125 ] Query: 旧版圆形语句
+  - [Score: 0.5   ] Query: 被 GUIEllipse 取代的可相容圆形绘制功能
+
+Key: DrawArcPath (Avg: 0.6667)
+  - [Score: 1     ] Query: 开发绘图工具时的白色 XOR 弧线路径
+  - [Score: 1     ] Query: 弧线绘图工具
+  - [Score: 0     ] Query: 用于构建绘图工具的互斥或 (XOR) 弧线
+
+Key: DrawChordPath (Avg: 0.5000)
+  - [Score: 1     ] Query: 在窗口中绘制白色 XOR 弦形路径
+  - [Score: 0.5   ] Query: 弦形路径工具
+  - [Score: 0     ] Query: 绘制夹角大于 180 度的椭圆切片
+
+Key: DrawEllipticalPath (Avg: 1.0000)
+  - [Score: 1     ] Query: 在任何窗口中显示互斥或椭圆路径
+  - [Score: 1     ] Query: 开发绘图工具时使用的椭圆路径函数
+  - [Score: 1     ] Query: 椭圆路径工具
+
+Key: DrawPath (Avg: 0.4167)
+  - [Score: 0.5   ] Query: 区分 DrawPath 与 PathDraw 的使用场景
+  - [Score: 0.25  ] Query: 在窗口中绘制白色互斥或多边形
+  - [Score: 0.5   ] Query: 多边形路径
+
+Key: DrawPiePath (Avg: 1.0000)
+  - [Score: 1     ] Query: 用于图形构建工具的白色饼图路径
+  - [Score: 1     ] Query: 用于工具开发的白色 XOR 饼图路径
+  - [Score: 1     ] Query: 饼图路径工具
+
+Key: DrawScale (Avg: 0.7500)
+  - [Score: 1     ] Query: 为线性或径向仪表绘制刻度线
+  - [Score: 1     ] Query: 仪表分度
+  - [Score: 1     ] Query: 刻度线绘制
+  - [Score: 0     ] Query: 在 GUITransform 中缩放主次分度线
+  - [Score: 0.5   ] Query: 在 GUITransform 中设定刻度线的相对尺寸
+  - [Score: 1     ] Query: 如何计算仪表刻度的大分度与小分度？
+
+Key: Ellipse (Avg: 1.0000)
+  - [Score: 1     ] Query: 旧版椭圆
+  - [Score: 1     ] Query: 旧版椭圆绘制语句及其替代方案
+  - [Score: 1     ] Query: 旧版椭圆语句与 Z 轴顺序的关系
+
+Key: GUIArc (Avg: 0.3125)
+  - [Score: 0.25  ] Query: 具备焦点获取功能的层次化圆弧图形
+  - [Score: 0     ] Query: 可选取弧形
+  - [Score: 0     ] Query: 图层圆弧
+  - [Score: 1     ] Query: 绘制可透过鼠标或输入键选取的窗口弧形
+
+Key: GUIBitmap (Avg: 0.3438)
+  - [Score: 1     ] Query: VTScada 中 32 位色彩图像的绘制效能
+  - [Score: 0.0625] Query: 图像绘制
+  - [Score: 0     ] Query: 在 Anywhere Client 中无法显示的图像格式
+  - [Score: 0     ] Query: 在窗口中显示 JPG、PNG 或 TIF 格式的图像
+  - [Score: 1     ] Query: 影响图形加速硬件效能的图形绘制功能
+  - [Score: 0     ] Query: 显示图片
+
+Key: GUIButton (Avg: 0.0000)
+  - [Score: 0     ] Query: 切换按钮
+  - [Score: 0     ] Query: 单选按钮组
+  - [Score: 0     ] Query: 如何使用代码绘制具备切换或单选功能的按钮？
+  - [Score: 0     ] Query: 如何设定按钮在鼠标悬停时的图像变化？
+  - [Score: 0     ] Query: 建立互斥单选按钮组的代码实例
+  - [Score: 0     ] Query: 按钮脚本
+  - [Score: 0     ] Query: 自定义按钮 ImageSet 结构的渲染规则
+
+Key: GUIChord (Avg: 1.0000)
+  - [Score: 1     ] Query: 分层弦形
+  - [Score: 1     ] Query: 在窗口中绘制分层图形弦形
+  - [Score: 1     ] Query: 绘制可传回布尔值的层次化弦形
+
+Key: GUIEllipse (Avg: 0.4531)
+  - [Score: 0.25  ] Query: 分层椭圆
+  - [Score: 0.5   ] Query: 如何避免嵌套椭圆的像素取整误差？
+  - [Score: 0.0625] Query: 椭圆像素修正
+  - [Score: 1     ] Query: 解决嵌套椭圆中的像素舍入误差问题
+
+Key: GUIPie (Avg: 0.4167)
+  - [Score: 0.5   ] Query: 分层饼图
+  - [Score: 0.25  ] Query: 绘制分层图形中的饼状楔形
+  - [Score: 0.5   ] Query: 绘制可点击的层次化饼状图分块
+
+Key: GUIPipe (Avg: 0.5156)
+  - [Score: 0.0625] Query: 3D阴影管道
+  - [Score: 1     ] Query: 使用顶点模式 4 保持管道右角效果
+  - [Score: 0.5   ] Query: 斜接管道
+  - [Score: 0.5   ] Query: 绘制具备 45 度斜接效果的三维阴影管道
+
+Key: GUIPolygon (Avg: 0.5000)
+  - [Score: 0     ] Query: Bezier曲线
+  - [Score: 0.5   ] Query: 使用 Bezier 曲线控制顶点的多边形绘制
+  - [Score: 0.5   ] Query: 分层多边形
+  - [Score: 1     ] Query: 利用 Bezier 曲线控点调整多边形形状
+
+Key: GUIRectangle (Avg: 0.4167)
+  - [Score: 0.125 ] Query: 分层矩形
+  - [Score: 0.125 ] Query: 在窗口中绘制可选取的分层矩形
+  - [Score: 1     ] Query: 层次化矩形在窗口中的定位与缩放
+
+Key: GUIText (Avg: 0.0000)
+  - [Score: 0     ] Query: UTF-8文字
+  - [Score: 0     ] Query: 在窗口中心绘制 UTF-8 格式化文本
+  - [Score: 0     ] Query: 在窗口中绘制 UTF-8 编码的格式化文本
+  - [Score: 0     ] Query: 格式化文本
+
+Key: GUITransform (Avg: 0.6161)
+  - [Score: 1     ] Query: 同步移动与缩放一组活动图形符号
+  - [Score: 0.0625] Query: 图形缩放
+  - [Score: 0     ] Query: 坐标变换
+  - [Score: 1     ] Query: 如何使一组对象一起移动和缩放？
+  - [Score: 1     ] Query: 对模块中的所有图形应用缩放或旋转变换
+  - [Score: 1     ] Query: 拖动变换对象时的调色板渲染机制
+  - [Score: 0.25  ] Query: 组合移动
+
+Key: HScrollbar (Avg: 0.0000)
+  - [Score: 0     ] Query: 为自定义图形添加水平卷轴导航
+  - [Score: 0     ] Query: 在自定义脚本图形中绘制水平卷轴
+  - [Score: 0     ] Query: 水平卷轴
+
+Key: IconMarker (Avg: 0.2500)
+  - [Score: 0     ] Query: 如何周期性切换显示手动数据标签？
+  - [Score: 1     ] Query: 循环显示问号或感叹号图标以表示数据状态
+  - [Score: 0     ] Query: 数据标记
+  - [Score: 0     ] Query: 状态图示
+
+Key: PathDraw (Avg: 0.3906)
+  - [Score: 0.0625] Query: 在 Idea Studio 中设置画笔样式 100 以绘制管道
+  - [Score: 1     ] Query: 在 Idea Studio 处理程序中定义路径外观
+  - [Score: 0     ] Query: 画笔样式100
+  - [Score: 0.5   ] Query: 路径外观
+
+Key: RadialLegend (Avg: 0.5625)
+  - [Score: 1     ] Query: 为径向仪表绘制恒定半径的文本标签
+  - [Score: 1     ] Query: 仪表文字
+  - [Score: 0     ] Query: 径向标签
+  - [Score: 0.25  ] Query: 解决非 True-Type 字体在径向仪表不缩放的问题
+
+Key: RadioButtons (Avg: 0.3125)
+  - [Score: 0     ] Query: 单选钮组
+  - [Score: 0     ] Query: 在系统库中绘制带边框的单选按钮组
+  - [Score: 0.25  ] Query: 带框按钮
+  - [Score: 1     ] Query: 绘制带有标题和边框的一组单选按钮
+
+Key: Spinbox (Avg: 0.0000)
+  - [Score: 0     ] Query: 变动触发
+  - [Score: 0     ] Query: 数值微调框
+  - [Score: 0     ] Query: 监控数值变动并提示保存的触发机制
+  - [Score: 0     ] Query: 绘制带有触发参数的数值微调框
+
+Key: SplitList (Avg: 0.3750)
+  - [Score: 1     ] Query: 使用 Ctrl 与 Shift 键进行列表多重选择
+  - [Score: 0.5   ] Query: 列表多选
+  - [Score: 0     ] Query: 双列列表
+  - [Score: 0     ] Query: 绘制支持多选的双列列表框
+
+Key: SplitListSelector (Avg: 0.0000)
+  - [Score: 0     ] Query: 在双列网格中移动项目的唯一键比较
+  - [Score: 0     ] Query: 用于在两个网格列表之间转移项目的 UI 工具
+  - [Score: 0     ] Query: 网格转移
+  - [Score: 0     ] Query: 项目选择器
+
+Key: SplitTagSelector (Avg: 0.0625)
+  - [Score: 0.25  ] Query: 在窗口中选择并转移标签名称的工具
+  - [Score: 0     ] Query: 标签转移
+  - [Score: 0     ] Query: 标签选择器
+  - [Score: 0     ] Query: 筛选并转移标签名称及其描述
+
+Key: ToolBar (Avg: 0.6667)
+  - [Score: 1     ] Query: 工具栏对象
+  - [Score: 0     ] Query: 构建具备交互功能的导航工具栏
+  - [Score: 1     ] Query: 绘制并维护工具栏及其按钮对象
+
+Key: VScrollbar (Avg: 0.0000)
+  - [Score: 0     ] Query: 在脚本中使用原生窗口卷轴处理鼠标滚轮
+  - [Score: 0     ] Query: 垂直卷轴
+  - [Score: 0     ] Query: 处理自定义脚本图形中的鼠标轮消息
+  - [Score: 0     ] Query: 如何设定垂直卷轴的页面长度与步长？
+  - [Score: 0     ] Query: 计算垂直卷轴的步长 (Steps) 与页面长度 (PageLen)
+  - [Score: 0     ] Query: 设定页长
+
+Key: ZBar (Avg: 0.0417)
+  - [Score: 0     ] Query: 仅用于文本模式编辑的分层长条
+  - [Score: 0.125 ] Query: 在文本模式下快速绘制简单分层长条
+  - [Score: 0     ] Query: 文本模式长条
+
+Key: ZBox (Avg: 0.0000)
+  - [Score: 0     ] Query: 在非 Idea Studio 环境中绘制分层方框
+  - [Score: 0     ] Query: 文本模式下不可在 Idea Studio 编辑的方框
+  - [Score: 0     ] Query: 文本模式方框
+
+Key: ZButton (Avg: 0.7083)
+  - [Score: 1     ] Query: 文本模式按钮
+  - [Score: 0.125 ] Query: 获取左键点击状态的层次化按钮
+  - [Score: 1     ] Query: 返回按钮点击状态的分层图形
+
+Key: ZEditField (Avg: 0.1667)
+  - [Score: 0.25  ] Query: 在窗口中添加不可在瘦客户端编辑的文本框
+  - [Score: 0.25  ] Query: 在窗口中绘制分层文本编辑字段
+  - [Score: 0     ] Query: 编辑字段
+
+Key: ZGrid (Avg: 1.0000)
+  - [Score: 1     ] Query: 分层网格
+  - [Score: 1     ] Query: 在特定窗口区域绘制点网格
+  - [Score: 1     ] Query: 绘制分层点网格的文本模式功能
+
+Key: ZLine (Avg: 0.6667)
+  - [Score: 1     ] Query: 分层直线
+  - [Score: 0     ] Query: 在文本编辑模式下连接两个坐标点
+  - [Score: 1     ] Query: 在窗口坐标间绘制分层直线
+
+Key: ZPipe (Avg: 0.5000)
+  - [Score: 0.5   ] Query: 具备 45 度斜接效果的文本模式管道
+  - [Score: 1     ] Query: 在文本编辑模式下绘制三维管道图形
+  - [Score: 0     ] Query: 文本模式管道
+
+Key: ZText (Avg: 0.8333)
+  - [Score: 1     ] Query: 分层标签
+  - [Score: 1     ] Query: 在层次化窗口中显示不含制表符的标签
+  - [Score: 0.5   ] Query: 在窗口中绘制不支持制表符的分层标签
+
+>> TOTAL AVERAGE FOR ZH-CN: 0.4405
+==========================================
+
+LANGUAGE: ZH-TW
+------------------------------------------
+Key: 4BtnDialog (Avg: 0.3214)
+  - [Score: 0     ] Query: System 函式庫中返回按鈕編號的對話框模組
+  - [Score: 1     ] Query: 四鈕對話框
+  - [Score: 0     ] Query: 在舊版應用中使用反斜線符號呼叫系統對話框
+  - [Score: 1     ] Query: 如何繪製帶有 4 個按鈕的消息對話框？
+  - [Score: 0.25  ] Query: 如何自定義四按鈕對話框的文字標籤？
+  - [Score: 0     ] Query: 對話框返回值
+  - [Score: 0     ] Query: 系統訊息框
+
+Key: Arc (Avg: 0.0000)
+  - [Score: 0     ] Query: 以順時針或逆時針繪製圓弧的相容性設定
+  - [Score: 0     ] Query: 繪製圓弧
+  - [Score: 0     ] Query: 繪製逆時針方向弧形的過時語句
+  - [Score: 0     ] Query: 逆時針弧形
+
+Key: Ball (Avg: 0.8333)
+  - [Score: 1     ] Query: 在螢幕上繪製填充圓形的指令
+  - [Score: 1     ] Query: 繪製圓形填充圖案的簡易指令
+  - [Score: 0.5   ] Query: 繪製實心圓
+
+Key: Bar (Avg: 1.0000)
+  - [Score: 1     ] Query: 如何在螢幕上繪製填充長條圖？
+  - [Score: 1     ] Query: 用於顯示數值進度的填充條形圖
+  - [Score: 1     ] Query: 繪製填充條
+
+Key: Bevel (Avg: 0.1667)
+  - [Score: 0     ] Query: 如何繪製具備立體感的帶標題框架？
+  - [Score: 0     ] Query: 繪製帶有標題的斜角框
+  - [Score: 0.5   ] Query: 繪製斜角框
+
+Key: Box (Avg: 0.0833)
+  - [Score: 0     ] Query: 在指定座標繪製矩形邊框
+  - [Score: 0.25  ] Query: 在螢幕上繪製空心框
+  - [Score: 0     ] Query: 繪製空心框
+
+Key: Circle (Avg: 0.2813)
+  - [Score: 0.0625] Query: 圓形相容模式
+  - [Score: 0.5   ] Query: 將舊版 Circle 函數遷移至 GUIEllipse 的方法
+  - [Score: 0.0625] Query: 舊版圓形語句
+  - [Score: 0.5   ] Query: 被 GUIEllipse 取代的可相容圓形繪製功能
+
+Key: DrawArcPath (Avg: 0.6667)
+  - [Score: 1     ] Query: 弧線繪圖工具
+  - [Score: 0     ] Query: 用於構建繪圖工具的互斥或 (XOR) 弧線
+  - [Score: 1     ] Query: 開發繪圖工具時的白色 XOR 弧線路徑
+
+Key: DrawChordPath (Avg: 0.3542)
+  - [Score: 1     ] Query: 在視窗中繪製白色 XOR 弦形路徑
+  - [Score: 0.0625] Query: 弦形路徑工具
+  - [Score: 0     ] Query: 繪製夾角大於 180 度的橢圓切片
+
+Key: DrawEllipticalPath (Avg: 1.0000)
+  - [Score: 1     ] Query: 在任何視窗中顯示互斥或橢圓路徑
+  - [Score: 1     ] Query: 橢圓路徑工具
+  - [Score: 1     ] Query: 開發繪圖工具時使用的橢圓路徑函數
+
+Key: DrawPath (Avg: 0.3750)
+  - [Score: 0.5   ] Query: 區分 DrawPath 與 PathDraw 的使用場景
+  - [Score: 0.125 ] Query: 在視窗中繪製白色互斥或多邊形
+  - [Score: 0.5   ] Query: 多邊形路徑
+
+Key: DrawPiePath (Avg: 0.5000)
+  - [Score: 0.5   ] Query: 用於圖形構建工具的白色餅圖路徑
+  - [Score: 0     ] Query: 用於工具開發的白色 XOR 餅圖路徑
+  - [Score: 1     ] Query: 餅圖路徑工具
+
+Key: DrawScale (Avg: 0.7500)
+  - [Score: 1     ] Query: 儀表分度
+  - [Score: 1     ] Query: 刻度線繪製
+  - [Score: 0     ] Query: 在 GUITransform 中縮放主次分度線
+  - [Score: 0.5   ] Query: 在 GUITransform 中設定刻度線的相對尺寸
+  - [Score: 1     ] Query: 如何計算儀表刻度的大分度與小分度？
+  - [Score: 1     ] Query: 為線性或徑向儀表繪製刻度線
+
+Key: Ellipse (Avg: 1.0000)
+  - [Score: 1     ] Query: 舊版橢圓
+  - [Score: 1     ] Query: 舊版橢圓繪製語句及其替代方案
+  - [Score: 1     ] Query: 舊版橢圓語句與 Z 軸順序的關係
+
+Key: GUIArc (Avg: 0.3750)
+  - [Score: 0.25  ] Query: 具備焦點獲取功能的層次化圓弧圖形
+  - [Score: 0.25  ] Query: 可選取弧形
+  - [Score: 0     ] Query: 圖層圓弧
+  - [Score: 1     ] Query: 繪製可透過滑鼠或輸入鍵選取的視窗弧形
+
+Key: GUIBitmap (Avg: 0.3438)
+  - [Score: 1     ] Query: VTScada 中 32 位元色彩圖像的繪製效能
+  - [Score: 0     ] Query: 圖像繪製
+  - [Score: 0     ] Query: 在 Anywhere Client 中無法顯示的圖像格式
+  - [Score: 0.0625] Query: 在視窗中顯示 JPG、PNG 或 TIF 格式的圖像
+  - [Score: 1     ] Query: 影響圖形加速硬體效能的圖形繪製功能
+  - [Score: 0     ] Query: 顯示圖片
+
+Key: GUIButton (Avg: 0.0000)
+  - [Score: 0     ] Query: 切換按鈕
+  - [Score: 0     ] Query: 單選按鈕組
+  - [Score: 0     ] Query: 如何使用代碼繪製具備切換或單選功能的按鈕？
+  - [Score: 0     ] Query: 如何設定按鈕在滑鼠懸停時的圖像變化？
+  - [Score: 0     ] Query: 建立互斥單選按鈕組的代碼實例
+  - [Score: 0     ] Query: 按鈕腳本
+  - [Score: 0     ] Query: 自定義按鈕 ImageSet 結構的渲染規則
+
+Key: GUIChord (Avg: 0.6667)
+  - [Score: 1     ] Query: 分層弦形
+  - [Score: 0.5   ] Query: 在視窗中繪製分層圖形弦形
+  - [Score: 0.5   ] Query: 繪製可傳回布林值的層次化弦形
+
+Key: GUIEllipse (Avg: 0.5313)
+  - [Score: 0     ] Query: 分層橢圓
+  - [Score: 1     ] Query: 如何避免嵌套橢圓的像素取整誤差？
+  - [Score: 0.125 ] Query: 橢圓像素修正
+  - [Score: 1     ] Query: 解決嵌套橢圓中的像素捨入誤差問題
+
+Key: GUIPie (Avg: 0.3750)
+  - [Score: 0.5   ] Query: 分層餅圖
+  - [Score: 0.125 ] Query: 繪製分層圖形中的餅狀楔形
+  - [Score: 0.5   ] Query: 繪製可點擊的層次化餅狀圖分塊
+
+Key: GUIPipe (Avg: 0.5625)
+  - [Score: 0.25  ] Query: 3D陰影管道
+  - [Score: 1     ] Query: 使用頂點模式 4 保持管道右角效果
+  - [Score: 0.5   ] Query: 斜接管道
+  - [Score: 0.5   ] Query: 繪製具備 45 度斜接效果的三維陰影管道
+
+Key: GUIPolygon (Avg: 0.5000)
+  - [Score: 0     ] Query: Bezier曲線
+  - [Score: 0.5   ] Query: 使用 Bezier 曲線控制頂點的多邊形繪製
+  - [Score: 0.5   ] Query: 分層多邊形
+  - [Score: 1     ] Query: 利用 Bezier 曲線控點調整多邊形形狀
+
+Key: GUIRectangle (Avg: 0.5833)
+  - [Score: 0.5   ] Query: 分層矩形
+  - [Score: 0.25  ] Query: 在視窗中繪製可選取的分層矩形
+  - [Score: 1     ] Query: 層次化矩形在視窗中的定位與縮放
+
+Key: GUIText (Avg: 0.0000)
+  - [Score: 0     ] Query: UTF-8文字
+  - [Score: 0     ] Query: 在視窗中心繪製 UTF-8 格式化文本
+  - [Score: 0     ] Query: 在視窗中繪製 UTF-8 編碼的格式化文本
+  - [Score: 0     ] Query: 格式化文本
+
+Key: GUITransform (Avg: 0.5714)
+  - [Score: 1     ] Query: 同步移動與縮放一組活動圖形符號
+  - [Score: 0     ] Query: 圖形縮放
+  - [Score: 1     ] Query: 如何使一組對象一起移動和縮放？
+  - [Score: 1     ] Query: 對模組中的所有圖形應用縮放或旋轉變換
+  - [Score: 0     ] Query: 座標變換
+  - [Score: 1     ] Query: 拖動變換對象時的調色盤渲染機制
+  - [Score: 0     ] Query: 組合移動
+
+Key: HScrollbar (Avg: 0.0000)
+  - [Score: 0     ] Query: 在自定義腳本圖形中繪製水平捲軸
+  - [Score: 0     ] Query: 水平捲軸
+  - [Score: 0     ] Query: 為自定義圖形添加水平捲軸導航
+
+Key: IconMarker (Avg: 0.2500)
+  - [Score: 0     ] Query: 如何週期性切換顯示手動數據標籤？
+  - [Score: 1     ] Query: 循環顯示問號或感嘆號圖標以表示數據狀態
+  - [Score: 0     ] Query: 數據標記
+  - [Score: 0     ] Query: 狀態圖示
+
+Key: PathDraw (Avg: 0.8750)
+  - [Score: 1     ] Query: 在 Idea Studio 中設置畫筆樣式 100 以繪製管道
+  - [Score: 1     ] Query: 在 Idea Studio 處理程序中定義路徑外觀
+  - [Score: 1     ] Query: 畫筆樣式100
+  - [Score: 0.5   ] Query: 路徑外觀
+
+Key: RadialLegend (Avg: 0.6250)
+  - [Score: 1     ] Query: 儀表文字
+  - [Score: 0     ] Query: 徑向標籤
+  - [Score: 1     ] Query: 為徑向儀表繪製恆定半徑的文本標籤
+  - [Score: 0.5   ] Query: 解決非 True-Type 字體在徑向儀表不縮放的問題
+
+Key: RadioButtons (Avg: 0.3125)
+  - [Score: 0     ] Query: 單選鈕組
+  - [Score: 0.125 ] Query: 在系統庫中繪製帶邊框的單選按鈕組
+  - [Score: 0.125 ] Query: 帶框按鈕
+  - [Score: 1     ] Query: 繪製帶有標題和邊框的一組單選按鈕
+
+Key: Spinbox (Avg: 0.0000)
+  - [Score: 0     ] Query: 數值微調框
+  - [Score: 0     ] Query: 監控數值變動並提示保存的觸發機制
+  - [Score: 0     ] Query: 繪製帶有觸發參數的數值微調框
+  - [Score: 0     ] Query: 變動觸發
+
+Key: SplitList (Avg: 0.2500)
+  - [Score: 1     ] Query: 使用 Ctrl 與 Shift 鍵進行列表多重選擇
+  - [Score: 0     ] Query: 列表多選
+  - [Score: 0     ] Query: 繪製支持多選的雙列列表框
+  - [Score: 0     ] Query: 雙列列表
+
+Key: SplitListSelector (Avg: 0.0625)
+  - [Score: 0.25  ] Query: 在雙列網格中移動項目的唯一鍵比較
+  - [Score: 0     ] Query: 用於在兩個網格列表之間轉移項目的 UI 工具
+  - [Score: 0     ] Query: 網格轉移
+  - [Score: 0     ] Query: 項目選擇器
+
+Key: SplitTagSelector (Avg: 0.2500)
+  - [Score: 1     ] Query: 在視窗中選擇並轉移標籤名稱的工具
+  - [Score: 0     ] Query: 標籤轉移
+  - [Score: 0     ] Query: 標籤選擇器
+  - [Score: 0     ] Query: 篩選並轉移標籤名稱及其描述
+
+Key: ToolBar (Avg: 0.4167)
+  - [Score: 0.25  ] Query: 工具列物件
+  - [Score: 0     ] Query: 構建具備交互功能的導航工具列
+  - [Score: 1     ] Query: 繪製並維護工具列及其按鈕物件
+
+Key: VScrollbar (Avg: 0.0000)
+  - [Score: 0     ] Query: 在腳本中使用原生視窗捲軸處理滑鼠滾輪
+  - [Score: 0     ] Query: 垂直捲軸
+  - [Score: 0     ] Query: 如何設定垂直捲軸的頁面長度與步長？
+  - [Score: 0     ] Query: 處理自定義腳本圖形中的滑鼠輪消息
+  - [Score: 0     ] Query: 計算垂直捲軸的步長 (Steps) 與頁面長度 (PageLen)
+  - [Score: 0     ] Query: 設定頁長
+
+Key: ZBar (Avg: 0.1042)
+  - [Score: 0.0625] Query: 僅用於文本模式編輯的分層長條
+  - [Score: 0.25  ] Query: 在文本模式下快速繪製簡單分層長條
+  - [Score: 0     ] Query: 文本模式長條
+
+Key: ZBox (Avg: 0.0000)
+  - [Score: 0     ] Query: 在非 Idea Studio 環境中繪製分層方框
+  - [Score: 0     ] Query: 文本模式下不可在 Idea Studio 編輯的方框
+  - [Score: 0     ] Query: 文本模式方框
+
+Key: ZButton (Avg: 1.0000)
+  - [Score: 1     ] Query: 文本模式按鈕
+  - [Score: 1     ] Query: 獲取左鍵點擊狀態的層次化按鈕
+  - [Score: 1     ] Query: 返回按鈕點擊狀態的分層圖形
+
+Key: ZEditField (Avg: 0.0000)
+  - [Score: 0     ] Query: 在視窗中添加不可在瘦客戶端編輯的文本框
+  - [Score: 0     ] Query: 在視窗中繪製分層文本編輯欄位
+  - [Score: 0     ] Query: 編輯欄位
+
+Key: ZGrid (Avg: 0.7083)
+  - [Score: 1     ] Query: 分層網格
+  - [Score: 0.125 ] Query: 在特定視窗區域繪製點網格
+  - [Score: 1     ] Query: 繪製分層點網格的文本模式功能
+
+Key: ZLine (Avg: 0.6667)
+  - [Score: 1     ] Query: 分層直線
+  - [Score: 0     ] Query: 在文本編輯模式下連接兩個座標點
+  - [Score: 1     ] Query: 在視窗座標間繪製分層直線
+
+Key: ZPipe (Avg: 0.5000)
+  - [Score: 0.5   ] Query: 具備 45 度斜接效果的文本模式管道
+  - [Score: 1     ] Query: 在文本編輯模式下繪製三維管道圖形
+  - [Score: 0     ] Query: 文本模式管道
+
+Key: ZText (Avg: 0.5000)
+  - [Score: 0.25  ] Query: 分層標籤
+  - [Score: 1     ] Query: 在層次化視窗中顯示不含製表符的標籤
+  - [Score: 0.25  ] Query: 在視窗中繪製不支持製表符的分層標籤
+
+>> TOTAL AVERAGE FOR ZH-TW: 0.4173
+==========================================
+

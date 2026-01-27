@@ -1,21 +1,16 @@
-models/
-node_modules/
-!node_modules/onnxruntime-common/**
-!node_modules/onnxruntime-node/**
-!node_modules/@node-rs/**
-!node_modules/stemmer/**
-!node_modules/@huggingface/tokenizers/**
-dist/
-vtscada-function*
+# models/
+# node_modules/
+# vtscada-function*
+# esbuild.js
+# example.SRC
+# model2onnx.py
+# resources/**
+# docs/**
+# README.md
+# hfdownload.ipynb
+# model2onnx2.py
 
-esbuild.js
-example.SRC
-model2onnx.py
+**/**
 
-resources/**
+!dist/**
 !resource/**
-docs/**
-
-README.md
-hfdownload.ipynb
-model2onnx2.py

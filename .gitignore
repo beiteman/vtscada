@@ -25,3 +25,5 @@ src/test-results.txt
 *.py
 create_test.py
 requirements.txt
+test.js
+build.js

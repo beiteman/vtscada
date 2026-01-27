@@ -1,0 +1,545 @@
+{
+  "en": {
+    "keys": {
+      "4BtnDialog": {
+        "averageScore": 1,
+        "sampleSize": 4
+      },
+      "Arc": {
+        "averageScore": 1,
+        "sampleSize": 3
+      },
+      "Ball": {
+        "averageScore": 1,
+        "sampleSize": 2
+      },
+      "Bar": {
+        "averageScore": 1,
+        "sampleSize": 2
+      },
+      "Bevel": {
+        "averageScore": 1,
+        "sampleSize": 2
+      },
+      "Box": {
+        "averageScore": 0.5,
+        "sampleSize": 2
+      },
+      "Circle": {
+        "averageScore": 1,
+        "sampleSize": 3
+      },
+      "DrawArcPath": {
+        "averageScore": 1,
+        "sampleSize": 2
+      },
+      "DrawChordPath": {
+        "averageScore": 0.5625,
+        "sampleSize": 2
+      },
+      "DrawEllipticalPath": {
+        "averageScore": 0.625,
+        "sampleSize": 2
+      },
+      "DrawPath": {
+        "averageScore": 1,
+        "sampleSize": 2
+      },
+      "DrawPiePath": {
+        "averageScore": 0.5,
+        "sampleSize": 2
+      },
+      "DrawScale": {
+        "averageScore": 1,
+        "sampleSize": 4
+      },
+      "Ellipse": {
+        "averageScore": 1,
+        "sampleSize": 2
+      },
+      "GUIArc": {
+        "averageScore": 0.08333333333333333,
+        "sampleSize": 3
+      },
+      "GUIBitmap": {
+        "averageScore": 0.34375,
+        "sampleSize": 4
+      },
+      "GUIButton": {
+        "averageScore": 0.5625,
+        "sampleSize": 4
+      },
+      "GUIChord": {
+        "averageScore": 0.125,
+        "sampleSize": 2
+      },
+      "GUIEllipse": {
+        "averageScore": 0.75,
+        "sampleSize": 2
+      },
+      "GUIPie": {
+        "averageScore": 0.1875,
+        "sampleSize": 2
+      },
+      "GUIPipe": {
+        "averageScore": 0.4166666666666667,
+        "sampleSize": 3
+      },
+      "GUIPolygon": {
+        "averageScore": 0.3125,
+        "sampleSize": 2
+      },
+      "GUIRectangle": {
+        "averageScore": 0.5625,
+        "sampleSize": 2
+      },
+      "GUIText": {
+        "averageScore": 0.3333333333333333,
+        "sampleSize": 3
+      },
+      "GUITransform": {
+        "averageScore": 0.125,
+        "sampleSize": 4
+      },
+      "HScrollbar": {
+        "averageScore": 1,
+        "sampleSize": 2
+      },
+      "IconMarker": {
+        "averageScore": 1,
+        "sampleSize": 2
+      },
+      "PathDraw": {
+        "averageScore": 1,
+        "sampleSize": 3
+      },
+      "RadialLegend": {
+        "averageScore": 0.625,
+        "sampleSize": 2
+      },
+      "RadioButtons": {
+        "averageScore": 1,
+        "sampleSize": 2
+      },
+      "Spinbox": {
+        "averageScore": 1,
+        "sampleSize": 2
+      },
+      "SplitList": {
+        "averageScore": 0.75,
+        "sampleSize": 2
+      },
+      "SplitListSelector": {
+        "averageScore": 0.75,
+        "sampleSize": 2
+      },
+      "SplitTagSelector": {
+        "averageScore": 0.625,
+        "sampleSize": 2
+      },
+      "ToolBar": {
+        "averageScore": 1,
+        "sampleSize": 2
+      },
+      "VScrollbar": {
+        "averageScore": 0.75,
+        "sampleSize": 4
+      },
+      "ZBar": {
+        "averageScore": 1,
+        "sampleSize": 2
+      },
+      "ZBox": {
+        "averageScore": 1,
+        "sampleSize": 2
+      },
+      "ZButton": {
+        "averageScore": 0.53125,
+        "sampleSize": 2
+      },
+      "ZEditField": {
+        "averageScore": 0.5,
+        "sampleSize": 2
+      },
+      "ZGrid": {
+        "averageScore": 1,
+        "sampleSize": 2
+      },
+      "ZLine": {
+        "averageScore": 1,
+        "sampleSize": 2
+      },
+      "ZPipe": {
+        "averageScore": 1,
+        "sampleSize": 2
+      },
+      "ZText": {
+        "averageScore": 1,
+        "sampleSize": 2
+      }
+    },
+    "totalAverage": 0.7391098484848485
+  },
+  "zh-cn": {
+    "keys": {
+      "4BtnDialog": {
+        "averageScore": 0.2857142857142857,
+        "sampleSize": 7
+      },
+      "Arc": {
+        "averageScore": 0.015625,
+        "sampleSize": 4
+      },
+      "Ball": {
+        "averageScore": 1,
+        "sampleSize": 3
+      },
+      "Bar": {
+        "averageScore": 0.8333333333333334,
+        "sampleSize": 3
+      },
+      "Bevel": {
+        "averageScore": 0.3333333333333333,
+        "sampleSize": 3
+      },
+      "Box": {
+        "averageScore": 0,
+        "sampleSize": 3
+      },
+      "Circle": {
+        "averageScore": 0.46875,
+        "sampleSize": 4
+      },
+      "DrawArcPath": {
+        "averageScore": 0.6666666666666666,
+        "sampleSize": 3
+      },
+      "DrawChordPath": {
+        "averageScore": 0.5,
+        "sampleSize": 3
+      },
+      "DrawEllipticalPath": {
+        "averageScore": 1,
+        "sampleSize": 3
+      },
+      "DrawPath": {
+        "averageScore": 0.4166666666666667,
+        "sampleSize": 3
+      },
+      "DrawPiePath": {
+        "averageScore": 1,
+        "sampleSize": 3
+      },
+      "DrawScale": {
+        "averageScore": 0.75,
+        "sampleSize": 6
+      },
+      "Ellipse": {
+        "averageScore": 1,
+        "sampleSize": 3
+      },
+      "GUIArc": {
+        "averageScore": 0.3125,
+        "sampleSize": 4
+      },
+      "GUIBitmap": {
+        "averageScore": 0.34375,
+        "sampleSize": 6
+      },
+      "GUIButton": {
+        "averageScore": 0,
+        "sampleSize": 7
+      },
+      "GUIChord": {
+        "averageScore": 1,
+        "sampleSize": 3
+      },
+      "GUIEllipse": {
+        "averageScore": 0.453125,
+        "sampleSize": 4
+      },
+      "GUIPie": {
+        "averageScore": 0.4166666666666667,
+        "sampleSize": 3
+      },
+      "GUIPipe": {
+        "averageScore": 0.515625,
+        "sampleSize": 4
+      },
+      "GUIPolygon": {
+        "averageScore": 0.5,
+        "sampleSize": 4
+      },
+      "GUIRectangle": {
+        "averageScore": 0.4166666666666667,
+        "sampleSize": 3
+      },
+      "GUIText": {
+        "averageScore": 0,
+        "sampleSize": 4
+      },
+      "GUITransform": {
+        "averageScore": 0.5803571428571429,
+        "sampleSize": 7
+      },
+      "HScrollbar": {
+        "averageScore": 0,
+        "sampleSize": 3
+      },
+      "IconMarker": {
+        "averageScore": 0.25,
+        "sampleSize": 4
+      },
+      "PathDraw": {
+        "averageScore": 0.390625,
+        "sampleSize": 4
+      },
+      "RadialLegend": {
+        "averageScore": 0.5625,
+        "sampleSize": 4
+      },
+      "RadioButtons": {
+        "averageScore": 0.3125,
+        "sampleSize": 4
+      },
+      "Spinbox": {
+        "averageScore": 0,
+        "sampleSize": 4
+      },
+      "SplitList": {
+        "averageScore": 0.375,
+        "sampleSize": 4
+      },
+      "SplitListSelector": {
+        "averageScore": 0,
+        "sampleSize": 4
+      },
+      "SplitTagSelector": {
+        "averageScore": 0.0625,
+        "sampleSize": 4
+      },
+      "ToolBar": {
+        "averageScore": 0.6666666666666666,
+        "sampleSize": 3
+      },
+      "VScrollbar": {
+        "averageScore": 0,
+        "sampleSize": 6
+      },
+      "ZBar": {
+        "averageScore": 0.041666666666666664,
+        "sampleSize": 3
+      },
+      "ZBox": {
+        "averageScore": 0,
+        "sampleSize": 3
+      },
+      "ZButton": {
+        "averageScore": 0.7083333333333334,
+        "sampleSize": 3
+      },
+      "ZEditField": {
+        "averageScore": 0.16666666666666666,
+        "sampleSize": 3
+      },
+      "ZGrid": {
+        "averageScore": 1,
+        "sampleSize": 3
+      },
+      "ZLine": {
+        "averageScore": 0.6666666666666666,
+        "sampleSize": 3
+      },
+      "ZPipe": {
+        "averageScore": 0.5,
+        "sampleSize": 3
+      },
+      "ZText": {
+        "averageScore": 0.8333333333333334,
+        "sampleSize": 3
+      }
+    },
+    "totalAverage": 0.4396645021645021
+  },
+  "zh-tw": {
+    "keys": {
+      "4BtnDialog": {
+        "averageScore": 0.32142857142857145,
+        "sampleSize": 7
+      },
+      "Arc": {
+        "averageScore": 0,
+        "sampleSize": 4
+      },
+      "Ball": {
+        "averageScore": 0.8333333333333334,
+        "sampleSize": 3
+      },
+      "Bar": {
+        "averageScore": 1,
+        "sampleSize": 3
+      },
+      "Bevel": {
+        "averageScore": 0.16666666666666666,
+        "sampleSize": 3
+      },
+      "Box": {
+        "averageScore": 0.08333333333333333,
+        "sampleSize": 3
+      },
+      "Circle": {
+        "averageScore": 0.28125,
+        "sampleSize": 4
+      },
+      "DrawArcPath": {
+        "averageScore": 0.6666666666666666,
+        "sampleSize": 3
+      },
+      "DrawChordPath": {
+        "averageScore": 0.3541666666666667,
+        "sampleSize": 3
+      },
+      "DrawEllipticalPath": {
+        "averageScore": 1,
+        "sampleSize": 3
+      },
+      "DrawPath": {
+        "averageScore": 0.375,
+        "sampleSize": 3
+      },
+      "DrawPiePath": {
+        "averageScore": 0.5,
+        "sampleSize": 3
+      },
+      "DrawScale": {
+        "averageScore": 0.75,
+        "sampleSize": 6
+      },
+      "Ellipse": {
+        "averageScore": 1,
+        "sampleSize": 3
+      },
+      "GUIArc": {
+        "averageScore": 0.375,
+        "sampleSize": 4
+      },
+      "GUIBitmap": {
+        "averageScore": 0.34375,
+        "sampleSize": 6
+      },
+      "GUIButton": {
+        "averageScore": 0,
+        "sampleSize": 7
+      },
+      "GUIChord": {
+        "averageScore": 0.6666666666666666,
+        "sampleSize": 3
+      },
+      "GUIEllipse": {
+        "averageScore": 0.53125,
+        "sampleSize": 4
+      },
+      "GUIPie": {
+        "averageScore": 0.375,
+        "sampleSize": 3
+      },
+      "GUIPipe": {
+        "averageScore": 0.5625,
+        "sampleSize": 4
+      },
+      "GUIPolygon": {
+        "averageScore": 0.5,
+        "sampleSize": 4
+      },
+      "GUIRectangle": {
+        "averageScore": 0.5833333333333334,
+        "sampleSize": 3
+      },
+      "GUIText": {
+        "averageScore": 0,
+        "sampleSize": 4
+      },
+      "GUITransform": {
+        "averageScore": 0.42857142857142855,
+        "sampleSize": 7
+      },
+      "HScrollbar": {
+        "averageScore": 0,
+        "sampleSize": 3
+      },
+      "IconMarker": {
+        "averageScore": 0.25,
+        "sampleSize": 4
+      },
+      "PathDraw": {
+        "averageScore": 0.875,
+        "sampleSize": 4
+      },
+      "RadialLegend": {
+        "averageScore": 0.625,
+        "sampleSize": 4
+      },
+      "RadioButtons": {
+        "averageScore": 0.3125,
+        "sampleSize": 4
+      },
+      "Spinbox": {
+        "averageScore": 0,
+        "sampleSize": 4
+      },
+      "SplitList": {
+        "averageScore": 0.25,
+        "sampleSize": 4
+      },
+      "SplitListSelector": {
+        "averageScore": 0.0625,
+        "sampleSize": 4
+      },
+      "SplitTagSelector": {
+        "averageScore": 0.25,
+        "sampleSize": 4
+      },
+      "ToolBar": {
+        "averageScore": 0.4166666666666667,
+        "sampleSize": 3
+      },
+      "VScrollbar": {
+        "averageScore": 0,
+        "sampleSize": 6
+      },
+      "ZBar": {
+        "averageScore": 0.10416666666666667,
+        "sampleSize": 3
+      },
+      "ZBox": {
+        "averageScore": 0,
+        "sampleSize": 3
+      },
+      "ZButton": {
+        "averageScore": 1,
+        "sampleSize": 3
+      },
+      "ZEditField": {
+        "averageScore": 0,
+        "sampleSize": 3
+      },
+      "ZGrid": {
+        "averageScore": 0.7083333333333334,
+        "sampleSize": 3
+      },
+      "ZLine": {
+        "averageScore": 0.6666666666666666,
+        "sampleSize": 3
+      },
+      "ZPipe": {
+        "averageScore": 0.5,
+        "sampleSize": 3
+      },
+      "ZText": {
+        "averageScore": 0.5,
+        "sampleSize": 3
+      }
+    },
+    "totalAverage": 0.4140625
+  }
+}
