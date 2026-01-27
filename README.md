@@ -359,19 +359,3 @@ This file can be installed directly into VS Code.
 * Runtime retrieval is fast due to precomputed vectors
 
 ---
-
-## 13. Summary
-
-This project consists of:
-
-* Offline indexing using Transformer embeddings
-* Runtime semantic retrieval
-* VS Code integration for developer productivity
-
-All critical logic is isolated, making it straightforward to:
-
-* Swap models
-* Extend languages
-* Improve ranking strategies
-
-With the steps and architecture described above, a new developer should be able to **rebuild, test, and extend the system confidently**.
