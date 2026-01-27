@@ -76,6 +76,9 @@ test.ts             # Test runner for retrieval logic
         model.onnx
         tokenizer.json
         tokenizer_config.json
+    /index.en.json
+    /index.zh-cn.json
+    /index.zh-tw.json
 /src
     bm25.ts         # Legacy BM25 retrieval (unused)
     tfidf.ts        # Legacy TF-IDF retrieval (unused)
@@ -99,15 +102,13 @@ Each language has its own file:
 
 ### Expected Structure (Conceptual)
 
-Each documentation entry typically contains:
+Each documentation entry contains:
 
 * Function name
-* Description
-* Parameters
-* Return value
-* Example usage
+* Description / Comments
+* Code Snippets
 
-These entries are treated as **atomic retrieval units** during indexing.
+These entries are treated as **atomic retrieval units** during indexing using the "comments".
 
 ---
 
