@@ -2,13 +2,13 @@
   "name": "vtscada-function-retrieval",
   "displayName": "VTScada Function Retrieval",
   "description": "",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "publisher": "vtscada",
   "repository": {
     "type": "git",
     "url": "https://github.com/beiteman/vtscada.git"
   },
-  "license": "UNLICENSED",
+  "license": "MIT",
   "engines": {
     "vscode": "^1.85.0"
   },
@@ -17,7 +17,8 @@
   ],
   "files": [
     "dist/**",
-    "resource/**"
+    "resource/**",
+    "LICENSE"
   ],
   "activationEvents": [
     "onLanguage:vtscadascript"

@@ -10,6 +10,7 @@ models/**
 
 resources/**
 resource/**
+_resource/**
 !resource/index.en.json
 !resource/index.zh-cn.json
 !resource/index.zh-tw.json

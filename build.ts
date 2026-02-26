@@ -1,7 +1,7 @@
 import * as path from 'path';
 import { STRetriever } from './src/transformer';
 
-const RES_ROOT = path.join(".", "resources", "data");
+const RES_ROOT = path.join(".", "resource");
 const DOCS_EN = path.join(".", "docs", "docs.en.json");
 const DOCS_CN = path.join(".", "docs", "docs.zh-cn.json");
 const DOCS_TW = path.join(".", "docs", "docs.zh-tw.json");

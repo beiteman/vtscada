@@ -1,6 +1,48 @@
-# Documentation
+# README
 
-## 1. Overview
+## Getting Started
+
+Follow these steps to get the project up and running.
+
+### Requirement
+
+Make sure these components installed:
+
+| Requirement | Recommended Version |
+|-------------|---------|
+| **Windows** | 11 |
+| **Node.js** | v20.19.4 |
+| **VS Code** | 1.103.2 |
+
+> **Note:** Recommended versions are based on successful testing. Other versions may also work.
+
+## Compile Instruction
+
+1. Navigate to the project folder
+2. Run `./compile.ps1`
+
+> If successfull, this step producing file `vtscada-function-retrieval-<version>.vsix`
+
+## Testing
+
+1. Run `npm install`
+2. Run `npx tsx test.ts`
+
+> If successfull, this step producing file `tests/test-results.txt`
+
+## Install in the VS Code
+
+1. In Visual Studio Code, click the **Extensions** icon in the Activity Bar
+2. Click the **More Actions** button (`...`) in the top-right corner of the Extensions view
+3. Select **Install from VSIX...**
+4. Browse and select the VSIX file `vtscada-function-retrieval-<version>.vsix`
+5. Click **Install**
+
+> After installation, user can create a file with the `.SRC` extension to start using the extension.
+
+## Documentation
+
+### 1. Overview
 
 This project implements a **function/document retrieval system for VTScada**, packaged as a **VS Code extension**. Its primary goal is to help developers quickly retrieve relevant VTScada functions or documentation snippets based on a natural-language query.
 
@@ -15,7 +57,7 @@ This document is intended to allow a **new developer to fully understand, operat
 
 ---
 
-## 2. High-Level Architecture
+### 2. High-Level Architecture
 
 At a high level, the system consists of four major layers:
 
@@ -55,11 +97,11 @@ At a high level, the system consists of four major layers:
 
 ---
 
-## 3. Repository Structure
+### 3. Repository Structure
 
 ```
-build.js            # Builds vector indexes from documentation
-build.ts            # TypeScript source for build.js
+compile.ps1         # Script to download models, build index and compile as vsix file
+build.ts            # Builds vector indexes from documentation
 test.ts             # Test runner for retrieval logic
 /tests
     testcases.json  # Input queries and expected result
@@ -90,7 +132,7 @@ test.ts             # Test runner for retrieval logic
 
 ---
 
-## 4. Documentation Data Format
+### 4. Documentation Data Format
 
 Documentation is stored as JSON files under `/docs`.
 
@@ -100,7 +142,7 @@ Each language has its own file:
 * `docs.zh-cn.json`
 * `docs.zh-tw.json`
 
-### Expected Structure (Conceptual)
+#### Expected Structure (Conceptual)
 
 Each documentation entry contains:
 
@@ -112,23 +154,23 @@ These entries are treated as **atomic retrieval units** during indexing using th
 
 ---
 
-## 5. Models and Resources
+### 5. Models and Resources
 
 The system uses **ONNX-based Transformer models** for sentence embedding.
 
-### English Model
+#### English Model
 
 * **Model**: `all-MiniLM-L6-v2`
 * Source: HuggingFace sentence-transformers
 * Used for English documentation and queries
 
-### Chinese Model
+#### Chinese Model
 
 * **Model**: `text2vec-base-chinese`
 * Source: HuggingFace (shibing624)
 * Used for Simplified and Traditional Chinese
 
-### Required Files per Model
+#### Required Files per Model
 
 Each model directory must contain:
 
@@ -140,7 +182,7 @@ These files are loaded at runtime for embedding generation.
 
 ---
 
-## 6. Language Detection
+### 6. Language Detection
 
 File: `src/languages.ts`
 
@@ -159,11 +201,11 @@ This ensures semantic consistency between query and documentation embeddings.
 
 ---
 
-## 7. Indexing Pipeline (Offline Build)
+### 7. Indexing Pipeline (Offline Build)
 
 Indexing is performed **offline** and must be done before testing or packaging.
 
-### Step 1: Preparation
+#### Step 1: Preparation
 
 Download required model files:
 
@@ -199,13 +241,12 @@ npm install
 
 ---
 
-### Step 2: Build Indexes
+#### Step 2: Build Indexes
 
 Compile and run the build script:
 
 ```
-tsc build.ts
-node build.js
+npx tsx build.ts
 ```
 
 This process:
@@ -214,7 +255,7 @@ This process:
 2. Generates embeddings for each entry
 3. Writes vector indexes to disk
 
-### Output Files
+#### Output Files
 
 ```
 resource/index.en.json
@@ -229,13 +270,13 @@ Each index contains:
 
 ---
 
-## 8. Retrieval Engine
+### 8. Retrieval Engine
 
 File: `src/transformer.ts`
 
 This is the **core runtime component**.
 
-### Responsibilities
+#### Responsibilities
 
 * Load ONNX model and tokenizer
 * Encode user query into a vector
@@ -244,18 +285,18 @@ This is the **core runtime component**.
 * Rank results
 * Return top-k matches
 
-### Notes
+#### Notes
 
 * Legacy files `bm25.ts` and `tfidf.ts` are kept for reference but are not used
 * Any new retrieval strategy should follow the same interface as `transformer.ts`
 
 ---
 
-## 9. Testing
+### 9. Testing
 
 Testing is done outside VS Code using a standalone runner.
 
-### Test Data
+#### Test Data
 
 File:
 
@@ -268,14 +309,13 @@ Contains:
 * Query strings
 * Expected relevant functions or descriptions
 
-### Run Tests
+#### Run Tests
 
 ```
-tsc test.ts
-node test.js
+npx tsx test.ts
 ```
 
-### Output
+#### Output
 
 ```
 tests/test-result.txt
@@ -291,13 +331,13 @@ Used to manually evaluate retrieval quality.
 
 ---
 
-## 10. VS Code Extension
+### 10. VS Code Extension
 
 File: `src/extension.ts`
 
 This is the entry point for the VS Code extension.
 
-### Responsibilities
+#### Responsibilities
 
 * Register VS Code commands
 * Capture user input
@@ -308,9 +348,9 @@ The extension does **not** build indexes — it only consumes prebuilt ones.
 
 ---
 
-## 11. Building the VS Code Extension
+### 11. Building the VS Code Extension
 
-### Step 1: Set Version
+#### Step 1: Set Version
 
 Edit `package.json`:
 
@@ -320,14 +360,14 @@ Edit `package.json`:
 
 ---
 
-### Step 2: Compile and Package
+#### Step 2: Compile and Package
 
 ```
 npm run compile
 npx vsce package
 ```
 
-### Output
+#### Output
 
 ```
 vtscada-function-retrieval-x.y.z.vsix
@@ -337,22 +377,22 @@ This file can be installed directly into VS Code.
 
 ---
 
-## 12. Development Notes for Future Maintainers
+### 12. Development Notes for Future Maintainers
 
-### Adding a New Language
+#### Adding a New Language
 
 1. Add documentation JSON under `/docs`
 2. Add or select an appropriate embedding model
 3. Extend `languages.ts`
 4. Rebuild indexes
 
-### Changing the Retrieval Model
+#### Changing the Retrieval Model
 
 * Implement new logic in a separate file
 * Keep interface compatible with `transformer.ts`
 * Update `extension.ts` to switch engines if needed
 
-### Performance Considerations
+#### Performance Considerations
 
 * Index size grows linearly with documentation
 * Embedding computation is the most expensive step
