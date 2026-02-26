@@ -19,7 +19,7 @@ Make sure these components installed:
 ## Compile Instruction
 
 1. Navigate to the project folder
-2. Run `./compile.ps1`
+2. Run `./compile.bat`
 
 > If successfull, this step producing file `vtscada-function-retrieval-<version>.vsix`
 
@@ -100,7 +100,7 @@ At a high level, the system consists of four major layers:
 ### 3. Repository Structure
 
 ```
-compile.ps1         # Script to download models, build index and compile as vsix file
+compile.bat         # Script to download models, build index and compile as vsix file
 build.ts            # Builds vector indexes from documentation
 test.ts             # Test runner for retrieval logic
 /tests
