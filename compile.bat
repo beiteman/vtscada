@@ -38,8 +38,8 @@ call :download_model ^
 call :download_model ^
  "%ZH_MODEL_DIR%" ^
  "https://huggingface.co/shibing624/text2vec-base-chinese/resolve/main/onnx/model.onnx" "model.onnx" ^
- "https://huggingface.co/shibing624/text2vec-base-chinese/resolve/main/tokenizer_config.json" "tokenizer_config.json" ^
- "https://huggingface.co/shibing624/text2vec-base-chinese/resolve/main/tokenizer.json" "tokenizer.json"
+ "https://huggingface.co/shibing624/text2vec-base-chinese/resolve/main/onnx/tokenizer_config.json" "tokenizer_config.json" ^
+ "https://huggingface.co/shibing624/text2vec-base-chinese/resolve/main/onnx/tokenizer.json" "tokenizer.json"
 
 :: ------------------------------------------------------------
 :: BUILD INDEX IF MISSING
